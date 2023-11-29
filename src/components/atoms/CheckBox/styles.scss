@@ -1,0 +1,88 @@
+/* ==========================================================================
+Styles for Checkbox component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Checkbox component
+.a-checkbox {
+  display: inline;
+  background-color: transparent;
+  @include small {
+    &:active {
+      label {
+        background-color: transparent;
+      }
+    }
+  }
+  input[type='checkbox'] {
+    display: none;
+    background-color: color(red, 100);
+    &:checked + label {
+      &::before {
+        border: 1px solid color(red, 100);
+      }
+      &::after {
+        border-radius: 4px;
+        background-color: color(red, 100);
+        content: '\e8c4';
+        font-family: 'bri-icon';
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 1.6rem;
+        height: 1.6rem;
+        color: color(white);
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        text-align: center;
+      }
+    }
+    &:disabled + label {
+      > * {
+        color: color(grey, 50) !important;
+      }
+      &::before {
+        border: 1px solid color(grey, 50);
+      }
+      &::after {
+        background-color: color(grey, 50);
+      }
+    }
+  }
+  .a-text-additional-information {
+    margin-bottom: 0px;
+    background-color: transparent;
+    @include small {
+      font-size: 1.4rem;
+    }
+  }
+  label {
+    background-color: transparent;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 4px;
+      font-size: 0;
+      letter-spacing: 0;
+      line-height: 0;
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 3px;
+      border: 1px solid color(red, 100);
+    }
+    display: inline-block;
+    position: relative;
+    padding-left: 3.2rem;
+    @include small {
+      padding-left: 2.4rem;
+    }
+  }
+  &.is-error label::before {
+    border: 2px solid color(system, error);
+  }
+}

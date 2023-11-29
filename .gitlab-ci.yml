@@ -1,0 +1,43 @@
+image: docker:latest
+services:
+  - docker:dind
+
+stages:
+  - build
+  - deploy
+
+variables:
+  ROLLBACK_IMAGE: $CI_REGISTRY_IMAGE:$CI_PIPELINE_ID
+  STAGING_IMAGE: $CI_REGISTRY_IMAGE:staging
+  PRODUCTION_IMAGE: $CI_REGISTRY_IMAGE:latest
+
+before_script:
+  - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+
+build:
+  stage: build
+  script:
+    - echo "REACT_APP_API_URL=$REACT_APP_API_URL" >> .env
+    - docker build --pull -t $ROLLBACK_IMAGE .
+    - docker push $ROLLBACK_IMAGE
+  only:
+    - develop
+    - master
+
+deploy:staging:
+  stage: deploy
+  script:
+    - docker pull $ROLLBACK_IMAGE
+    - docker tag $ROLLBACK_IMAGE $STAGING_IMAGE
+    - docker push $STAGING_IMAGE
+  only:
+    - develop
+
+deploy:production:
+  stage: deploy
+  script:
+    - docker pull $ROLLBACK_IMAGE
+    - docker tag $ROLLBACK_IMAGE $PRODUCTION_IMAGE
+    - docker push $PRODUCTION_IMAGE
+  only:
+    - master

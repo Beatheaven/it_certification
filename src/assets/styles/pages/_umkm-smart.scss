@@ -1,0 +1,65 @@
+/* ==========================================================================
+Styles for UMKM Smart component
+========================================================================== */
+
+// import mixin and variables
+@import "../../../assets/styles/helper/function", "../../../assets/styles/helper/mixin", "../../../assets/styles/project/init/variables";
+
+// Start styles UMKM Smart component
+
+.o-umkm-smart {
+    min-height: 100vh;
+    width: 100%;
+    background-color: color(gray, 20);
+    &__card {
+        position: relative;
+        z-index: 2;
+        margin-top: 266px;
+        left: 0;
+        margin-bottom: 22px;
+    }
+    &__content {
+        padding-bottom: 3rem;
+    }
+
+    .o-header {
+        display: relative;
+
+        >.container {
+            display: block;
+            padding: 1.6rem 0;
+            padding-right: .4rem;
+
+            @include mq(896px) {
+                display: table-cell;
+                padding: 0 2.4rem;
+                padding-left: 32px;
+            }
+        }
+
+        .navigation-button {
+            .login-button {
+                .a-system-icon {
+                    display: none;
+                }
+            }
+
+            .login-button,
+            .burger-button {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .umkm-header {
+        // display: inline-block;
+        width: 100%;
+        height: 74px;
+    }
+
+    .o-header-banner {
+        position: absolute;
+        padding-bottom: 328px;
+        z-index: 1;
+    }
+}

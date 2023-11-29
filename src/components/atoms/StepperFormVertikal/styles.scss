@@ -1,0 +1,73 @@
+/* ==========================================================================
+Styles for Stepper Form Vertikal component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Stepper Form Vertikal component
+
+.o-stepper-form-vertikal {
+  display: table-cell;
+  vertical-align: middle;
+  &__step-wrapper {
+    position: absolute;
+    display: table-cell;
+    vertical-align: middle;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    background-color: #dadada;
+    .value {
+      text-align: center;
+      font-size: 16px;
+      color: color(gray, 100);
+
+      i {
+        font-size: 16px;
+        font-weight: 700;
+        color: color(white);
+      }
+    }
+
+    &.is-active {
+      background-color: #ffbc1f;
+      .value {
+        color: color(black);
+      }
+    }
+    &.is-done {
+      background-color: #528de0;
+    }
+    @include small {
+      display: none;
+    }
+  }
+
+  &__text-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 1px;
+    padding-left: 34px;
+    &.is-active {
+      font-weight: 700;
+    }
+
+    @include large {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    @include small {
+      display: none;
+      &.is-active {
+        display: table-cell;
+      }
+      padding-left: 10px;
+      padding-right: 0px;
+    }
+  }
+}

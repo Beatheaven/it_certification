@@ -1,0 +1,26 @@
+.o-card-news {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 4px 8px 32px 0 rgba(32, 32, 35, 0.08);
+  display: flex;
+  align-items: center;
+
+  &__background {
+    width: 20%;
+
+    img {
+      height: 100%;
+      border-radius: 8px;
+    }
+
+  }
+
+  &__content {
+    width: 100%;
+    padding: 2rem 4rem;
+  }
+
+  .news-desc {
+    margin: 1rem 0;
+  }
+}

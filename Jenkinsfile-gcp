@@ -1,0 +1,118 @@
+def appName = "fe-umkm-revamp"
+def namespace = "umkm"
+
+pipeline {
+  agent {
+    kubernetes {
+      label "jnlp-slave-${appName}-${env.BUILD_NUMBER}"
+      defaultContainer "jnlp"
+      yaml """
+        apiVersion: v1
+        kind: Pod
+        metadata:
+          labels:
+            component: ci
+        spec:
+          # Use service account that can deploy to all namespaces
+          serviceAccountName: cd2-jenkins
+          containers:
+          - name: gcloud
+            image: google/cloud-sdk:272.0.0-alpine
+            command:
+            - cat
+            tty: true
+          - name: helm
+            image: alpine/helm:2.9.1
+            imagePullPolicy: IfNotPresent
+            command:
+            - cat
+            tty: true
+          - name: jnlp
+            image: yogaarie/jnlp-yoga
+            imagePullPolicy: IfNotPresent
+      """
+    }
+  }
+  stages {
+    stage('Quality Node') {
+      when {
+         branch 'develop'
+       }
+      environment {
+        scannerHome = tool 'sonarscanner'
+      }
+      steps {
+        script {
+        try {
+        withSonarQubeEnv('sonarqube') {
+          sh "${scannerHome}/bin/sonar-scanner -X"
+           }
+        }
+        catch (err) {
+                echo 'Application Scanned'
+          }
+        }
+      }
+    }
+    stage("Build Image") {
+      environment {
+        project = "${env.BRANCH_NAME == 'master' ? 'concrete-plasma-244309' : 'ddb-development'}"
+        IMAGE_REPO = "gcr.io/${project}/${appName}"
+        IMAGE_TAG = "${env.GIT_COMMIT.substring(0,7)}"
+      }
+      steps {
+        container("gcloud") {
+        withCredentials([
+          file(credentialsId: "k8s-builder-prod", variable: "JSONKEY"),
+          file(credentialsId: "UMKMDEPLOYRSA", variable: "UMKMDEPLOYRSA"),
+          file(credentialsId: "UMKMDEPLOYRSAPUB", variable: "UMKMDEPLOYRSAPUB") 
+          ]) {
+            sh "if [ ${GIT_BRANCH} = master ] ; then rm -rf .env.development .env .env.example ;fi"
+            sh "if [ ${GIT_BRANCH} = develop ] ; then mv -f .env.development .env.production && rm -rf .env.example .env  ;fi"
+            sh "cat ${JSONKEY} >> key.json"
+            sh "gcloud auth activate-service-account --key-file=key.json"
+            sh "gcloud builds submit --project ${project} --tag ${IMAGE_REPO}:${IMAGE_TAG} ."
+          }
+      }
+      }
+    }
+    stage("Deployment to Develop") {
+      when {
+        branch 'develop'
+      }
+      environment {
+        project = "${env.BRANCH_NAME == 'master' ? 'concrete-plasma-244309' : 'ddb-development'}"
+        IMAGE_REPO = "gcr.io/${project}/${appName}"
+        IMAGE_TAG = "${env.GIT_COMMIT.substring(0,7)}"
+      }
+      steps {
+        container("helm") {
+          sh """
+              helm upgrade ${appName} ./helm/${appName} \
+                --set-string image.repository=${IMAGE_REPO},image.tag=${IMAGE_TAG} \
+                -f ./helm/values.gcp.dev.yml  --debug --install --namespace ${namespace}
+            """
+        }
+      }
+    }
+    stage("Deployment to Master") {
+      when {
+        branch 'master'
+      }
+      environment {
+        project = "${env.BRANCH_NAME == 'master' ? 'concrete-plasma-244309' : 'ddb-development'}"
+        IMAGE_REPO = "gcr.io/${project}/${appName}"
+        IMAGE_TAG = "${env.GIT_COMMIT.substring(0,7)}"
+      }
+      steps {
+        container("helm") {
+          sh """
+              helm upgrade ${appName} ./helm/${appName} \
+                --set-string image.repository=${IMAGE_REPO},image.tag=${IMAGE_TAG} \
+                -f ./helm/values.gcp.prd.yml  --debug --install --namespace ${namespace}
+            """
+        }
+      }
+    }
+  }
+}

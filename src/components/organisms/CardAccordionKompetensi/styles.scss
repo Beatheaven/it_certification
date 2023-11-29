@@ -1,0 +1,45 @@
+/* ==========================================================================
+Styles for Card Accordion Kompetensi component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Card Accordion Kompetensi component
+
+.o-card-accordion-kompetensi {
+  &__wrapper {
+    width: 100%;
+    background-color: color(white);
+    border-radius: 8px;
+    @include shadow('on-white');
+    &:not(:last-child) {
+      margin-bottom: 22px;
+    }
+    &--active {
+      .o-card-accordion-kompetensi__icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__header {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  &__icon {
+    height: 24px;
+    width: 24px;
+  }
+  &__content {
+    position: relative;
+    padding: 40px;
+    border-top: 1px solid color(gray, 50);
+    .o-score-survey {
+      margin-bottom: 40px;
+    }
+  }
+}

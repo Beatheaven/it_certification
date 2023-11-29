@@ -1,0 +1,21 @@
+/* ==========================================================================
+Styles for TextTopNav component
+========================================================================== */
+
+// import mixin and variables
+@import "../../../assets/styles/helper/function", "../../../assets/styles/helper/mixin", "../../../assets/styles/project/init/variables";
+
+// Start styles TextTopNav component
+.a-text-top-nav {
+    font-size: fz(top-nav);
+    line-height: lh(lh-top-nav);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color .25s ease;
+        @include font-weight-default-reguler;
+        @include colors-all-font-hover;
+    @include small {
+        font-size: fz(mtop-nav);
+        line-height: lh(mtop-nav);
+    }
+}

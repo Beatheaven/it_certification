@@ -1,0 +1,27 @@
+/* ==========================================================================
+Styles for Card Profile component
+========================================================================== */
+
+// import mixin and variables
+@import "../../../assets/styles/helper/function", "../../../assets/styles/helper/mixin",
+  "../../../assets/styles/project/init/variables";
+
+// Start styles Card Profile component
+
+.o-card-progress-bar {
+  height: 150px;
+  max-width: 804px;
+  background-color: color(white);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  @include shadow('on-white');
+
+  &__progress-bar-wrapper {
+    width: 100%;
+    height: 141px;
+
+    @include small {
+      display: block;
+    }
+  }
+}

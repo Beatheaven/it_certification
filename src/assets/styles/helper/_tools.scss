@@ -1,0 +1,50 @@
+.button-overlay {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    z-index: $z-button-overlay;
+    cursor: pointer;
+    @include remove-tap-highlight;
+}
+  
+.button-overlay-mobile{
+    display: none;
+    @extend .button-overlay;
+    @include small {
+        display: block;
+    }
+}
+  
+.no-render {
+    display: none !important;
+    opacity: 0 !important;
+    font-size: 0 !important;
+    letter-spacing: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.align-right {
+    text-align: left;
+}

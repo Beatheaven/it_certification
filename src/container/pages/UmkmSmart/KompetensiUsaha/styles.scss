@@ -1,0 +1,22 @@
+.o-umkm-smart__kompetensi {
+  margin: 3rem 0;
+}
+
+.o-card-umkm-kompetensi {
+  background-color: white;
+  border-radius: 8px;
+
+  &__content {
+    padding: 2rem 4rem;
+  }
+}
+
+.o-progress-bar--medium {
+  margin: 2rem 0;
+
+  .title-progress-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+}

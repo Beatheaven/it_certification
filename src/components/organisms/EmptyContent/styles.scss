@@ -1,0 +1,16 @@
+// empty content
+.empty-content {
+  display: block;
+  width: 100%;
+  text-align: center;
+  &__image {
+    margin: 2rem 0;
+  }
+  &__text {
+    margin: auto;
+    max-width: 500px;
+  }
+  &__action{
+    margin: 3rem 0;
+  }
+}

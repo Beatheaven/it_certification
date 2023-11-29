@@ -1,0 +1,19 @@
+/* ==========================================================================
+Styles for Recommended Class component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Recommended Class component
+
+.o-recommended-class {
+  .button--d {
+    display: none;
+    @include small {
+      display: block;
+    }
+  }
+}

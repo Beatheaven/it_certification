@@ -1,0 +1,117 @@
+/* ==========================================================================
+Styles for Card Usaha component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Card Usaha component
+
+.o-card-usaha {
+  width: 100%;
+  height: 186px;
+  border-radius: 8px;
+  background-color: color(primary, 120);
+  -webkit-border-radius: 8px;
+  display: table;
+  @include shadow('on-white');
+  @include small {
+    margin-bottom: 20px;
+    height: 100%;
+  }
+  .icon-title {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: unset;
+    img {
+      width: 100%;
+      height: 100%;
+      margin: unset;
+      position: absolute;
+    }
+  }
+
+  &__image-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    float: left;
+    width: 274px;
+    height: 186px;
+    left: 0;
+    img {
+      height: 100%;
+      border-bottom-right-radius: 457.02px;
+      object-fit: cover;
+      @include small {
+        height: 80%;
+      }
+    }
+    &--d {
+      display: block;
+      @include small {
+        display: none;
+      }
+    }
+
+    &--m {
+      display: none;
+      @include small {
+        display: block;
+      }
+    }
+  }
+
+  &__text-wrapper {
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    display: table-cell;
+    vertical-align: middle;
+    h4 {
+      margin-bottom: 8px;
+    }
+
+    .text-wrapper-contact {
+      display: table;
+      .r {
+        display: table-cell;
+        vertical-align: middle;
+        padding-right: 14px;
+        i {
+          font-size: 20px;
+          color: color(white);
+        }
+      }
+
+      .l {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      &--d {
+        display: block;
+        @include small {
+          display: none;
+        }
+      }
+
+      &--m {
+        display: none;
+        @include small {
+          display: block;
+        }
+      }
+    }
+
+    @include small {
+      padding: 0px 20px 20px 20px;
+      display: block;
+    }
+  }
+}

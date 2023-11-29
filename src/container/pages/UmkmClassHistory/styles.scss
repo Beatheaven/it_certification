@@ -1,0 +1,99 @@
+.history-class {
+  width: 100%;
+  box-shadow: 4px 8px 32px 0 rgba(32, 32, 35, 0.08);
+  border-radius: 8px;
+
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    background: #00427d;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+    &--item {
+      flex-grow: 1;
+      width: 25%;
+    }
+  }
+
+  &__body {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 2rem 0;
+    background: white;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top: 1px solid #DADADA;
+
+    &.no-data {
+      justify-content: center;
+    }
+
+    &--item {
+      flex-grow: 1;
+      width: 25%;
+    }
+  }
+
+  .history-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    &:hover {
+      .o--text-body {
+        color: #00427d;
+      }
+    }
+
+    &__img {
+      width: 50px;
+      height: 50px;
+      margin-right: 2rem;
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+    }
+  }
+}
+
+.score-history {
+  &__head {
+    margin-bottom: 3rem;
+    .name-courses {
+      color: #00427d;
+      font-weight: bold;
+    }
+  }
+
+  &__current-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .history-class__body {
+    border: 1px solid #DADADA;
+    border-top: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .test-score {
+    text-align: center;
+    padding: 0.2rem 1rem;
+    max-width: none;
+    margin: 0;
+    margin-left: .5rem;
+    border-radius: 8px;
+    background-color: rgba(82, 141, 224, 0.2);
+    color: #00427d;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}

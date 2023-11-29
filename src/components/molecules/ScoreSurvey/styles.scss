@@ -1,0 +1,43 @@
+/* ==========================================================================
+Styles for Score Survey component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Score Survey component
+
+.o-score-survey {
+  display: flex;
+  flex-wrap: nowrap;
+  .a-h3 {
+    margin-right: 8px;
+  }
+  &_score-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    .score {
+      height: 27px;
+      width: 27px;
+      border-radius: 50%;
+      background-color: #f2f2f2;
+      margin-top: 2px;
+      margin-left: 6px;
+
+      @include small {
+        height: 22px;
+        width: 22px;
+      }
+    }
+  }
+  @include large {
+    display: block;
+
+    .a-h3 {
+      font-size: 20px;
+      margin-right: auto;
+    }
+  }
+}

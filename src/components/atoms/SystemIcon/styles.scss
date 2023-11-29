@@ -1,0 +1,389 @@
+/* ==========================================================================
+Styles for Icon component
+========================================================================== */
+
+// import mixin and variables
+@import "../../../assets/styles/helper/function", "../../../assets/styles/helper/mixin", "../../../assets/styles/project/init/variables";
+
+// Start styles Icon component
+.a-system-icon {
+ line-height: 1;
+ vertical-align: middle;
+
+  @include colors-all-font;
+
+  font-size: 1.6rem;
+
+  &.d-icon-16 {
+    font-size: 1.6rem;
+  }
+  &.d-icon-24 {
+    font-size: 2.4rem;
+  }
+  &.d-icon-32 {
+    font-size: 3.2rem;
+  }
+  &.d-icon-40 {
+    font-size: 4rem;
+  }
+  &.d-icon-48 {
+    font-size: 4.8rem;
+  }
+  &.d-icon-56 {
+    font-size: 5.6rem;
+  }
+  &.d-icon-64 {
+    font-size: 6.4rem;
+  }
+  &.d-icon-80 {
+    font-size: 8rem;
+  }
+  &.d-icon-100 {
+    font-size: 10rem;
+  }
+
+  @include small {
+    &.micon {
+      &.m-icon-16 {
+        font-size: 1.6rem;
+      }
+      &.m-icon-24 {
+        font-size: 2.4rem;
+      }
+      &.m-icon-32 {
+        font-size: 3.2rem;
+      }
+      &.m-icon-40 {
+        font-size: 4rem;
+      }
+      &.m-icon-48 {
+        font-size: 4.8rem;
+      }
+      &.m-icon-64 {
+        font-size: 6.4rem;
+      }
+    }
+  }
+
+  &[class^="icon-"]:before, &[class*=" icon-"]:before {
+    font-family: "bri-icon";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    // margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    // margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+  }
+
+&.icon-3-dot-16:before { content: '\e800'; } /* '' */
+&.icon-3-dot-24:before { content: '\e801'; } /* '' */
+&.icon-3-dot-32:before { content: '\e802'; } /* '' */
+&.icon-3-dot-40:before { content: '\e803'; } /* '' */
+&.icon-add:before { content: '\e804'; } /* '' */
+&.icon-arrow-right:before { content: '\e805'; } /* '' */
+&.icon-arrow-simple-down:before { content: '\e806'; } /* '' */
+&.icon-arrow-simple-up:before { content: '\e806'; transform: rotate(180deg) } /* '' */
+&.icon-simple-left:before { content: '\e807'; } /* '' */
+&.icon-arrow-up:before { content: '\e808'; } /* '' */
+&.icon-atm:before { content: '\e809'; } /* '' */
+&.icon-bank:before { content: '\e80a'; } /* '' */
+&.icon-bonds:before { content: '\e80b'; } /* '' */
+&.icon-calendar:before { content: '\e80c'; } /* '' */
+&.icon-car:before { content: '\e80d'; } /* '' */
+&.icon-clock-32:before { content: '\e80e'; } /* '' */
+&.icon-clock-fill:before { content: '\e80f'; } /* '' */
+&.icon-close-24:before { content: '\e810'; } /* '' */
+&.icon-close-32:before { content: '\e811'; } /* '' */
+&.icon-close-40:before { content: '\e812'; } /* '' */
+&.icon-compare-16:before { content: '\e813'; } /* '' */
+&.icon-compare-32:before { content: '\e814'; } /* '' */
+&.icon-compare:before { content: '\e815'; } /* '' */
+&.icon-conversation-16:before { content: '\e816'; } /* '' */
+&.icon-conversation-32:before { content: '\e817'; } /* '' */
+&.icon-credit-card:before { content: '\e818'; } /* '' */
+&.icon-current:before { content: '\e819'; } /* '' */
+&.icon-delete:before { content: '\e81a'; } /* '' */
+&.icon-down:before { content: '\e81b'; } /* '' */
+&.icon-edit-home:before { content: '\e81c'; } /* '' */
+&.icon-edit:before { content: '\e81d'; } /* '' */
+&.icon-estatement:before { content: '\e81e'; } /* '' */
+&.icon-eye-hide:before { content: '\e81f'; } /* '' */
+&.icon-eye-show:before { content: '\e820'; } /* '' */
+&.icon-facebook:before { content: '\e821'; } /* '' */
+&.icon-fav-16:before { content: '\e822'; } /* '' */
+&.icon-fav-32:before { content: '\e823'; } /* '' */
+&.icon-forex-registration:before { content: '\e824'; } /* '' */
+&.icon-help-24:before { content: '\e825'; } /* '' */
+&.icon-help-32:before { content: '\e826'; } /* '' */
+&.icon-instagram:before { content: '\e827'; } /* '' */
+&.icon-linkedin:before { content: '\e828'; } /* '' */
+&.icon-login:before { content: '\e829'; } /* '' */
+&.icon-logout-16:before { content: '\e82a'; } /* '' */
+&.icon-logout-32:before { content: '\e82b'; } /* '' */
+&.icon-mail-16:before { content: '\e82c'; } /* '' */
+&.icon-mail-24:before { content: '\e82d'; } /* '' */
+&.icon-mail-32:before { content: '\e82e'; } /* '' */
+&.icon-map-search:before { content: '\e82f'; } /* '' */
+&.icon-masonry-1:before { content: '\e830'; } /* '' */
+&.icon-service-deposit:before { content: '\e831'; } /* '' */
+&.icon-moon:before { content: '\e832'; } /* '' */
+&.icon-mortgage:before { content: '\e833'; } /* '' */
+&.icon-mouse:before { content: '\e834'; } /* '' */
+&.icon-mutual-funds:before { content: '\e835'; } /* '' */
+&.icon-no-handphone:before { content: '\e836'; } /* '' */
+&.icon-password:before { content: '\e837'; } /* '' */
+&.icon-pay-and-transfer:before { content: '\e838'; } /* '' */
+&.icon-personal-loan:before { content: '\e839'; } /* '' */
+&.icon-pin:before { content: '\e83a'; } /* '' */
+&.icon-placeholder:before { content: '\e83b'; } /* '' */
+&.icon-profile-32:before { content: '\e83c'; } /* '' */
+&.icon-profile-edit-16:before { content: '\e83d'; } /* '' */
+&.icon-simple-right:before { content: '\e83e'; } /* '' */
+&.icon-savings:before { content: '\e83f'; } /* '' */
+&.icon-search:before { content: '\e840'; } /* '' */
+&.icon-selected:before { content: '\e841'; } /* '' */
+&.icon-setting:before { content: '\e842'; } /* '' */
+&.icon-share:before { content: '\e843'; } /* '' */
+&.icon-store-24:before { content: '\e844'; } /* '' */
+&.icon-store-32:before { content: '\e845'; } /* '' */
+&.icon-store-40:before { content: '\e846'; } /* '' */
+&.icon-telephone:before { content: '\e847'; } /* '' */
+&.icon-time-deposit:before { content: '\e848'; } /* '' */
+&.icon-twitter:before { content: '\e849'; } /* '' */
+&.icon-upload:before { content: '\e84a'; } /* '' */
+&.icon-whatsapp:before { content: '\e84b'; } /* '' */
+&.icon-youtube:before { content: '\e84c'; } /* '' */
+&.icon-caret-down-fill:before { content: '\e84d'; } /* '' */
+&.icon-caret-up-fill:before { content: '\e84e'; } /* '' */
+&.icon-error-message:before { content: '\e84f'; } /* '' */
+&.icon-printer:before { content: '\e850'; } /* '' */
+&.icon-globe-1:before { content: '\e851'; } /* '' */
+&.icon-arrow-left:before { content: '\e852'; } /* '' */
+&.icon-arrow-down:before { content: '\e853'; } /* '' */
+&.icon-fill-login:before { content: '\e854'; } /* '' */
+&.icon-block-user:before { content: '\e855'; } /* '' */
+&.icon-conversation-24:before { content: '\e856'; } /* '' */
+&.icon-limit-transaksi:before { content: '\e857'; } /* '' */
+&.icon-tips:before { content: '\e858'; } /* '' */
+&.icon-cash-on-call:before { content: '\e859'; } /* '' */
+&.icon-unlink-device:before { content: '\e85a'; } /* '' */
+&.icon-account-menu:before { content: '\e85b'; } /* '' */
+&.icon-akunmu:before { content: '\e85c'; } /* '' */
+&.icon-insight:before { content: '\e85d'; } /* '' */
+&.icon-masonry:before { content: '\e85e'; } /* '' */
+&.icon-dinamis:before { content: '\e85f'; } /* '' */
+&.icon-company:before { content: '\e860'; } /* '' */
+&.icon-partial:before { content: '\e861'; } /* '' */
+&.icon-phone-prepaid:before { content: '\e862'; } /* '' */
+&.icon-electricity-water:before { content: '\e863'; } /* '' */
+&.icon-change-language:before { content: '\e864'; } /* '' */
+&.icon-simplepay:before { content: '\e865'; } /* '' */
+&.icon-sell:before { content: '\e866'; } /* '' */
+&.icon-bill:before { content: '\e867'; } /* '' */
+&.icon-add-credit-card:before { content: '\e868'; } /* '' */
+&.icon-education:before { content: '\e869'; } /* '' */
+&.icon-limit-1:before { content: '\e86a'; } /* '' */
+&.icon-add-kartu-tambahan:before { content: '\e86b'; } /* '' */
+&.icon-individual:before { content: '\e86c'; } /* '' */
+&.icon-goverment:before { content: '\e86d'; } /* '' */
+&.icon-post-paid-bill:before { content: '\e86e'; } /* '' */
+&.icon-businesstrip:before { content: '\e86f'; } /* '' */
+&.icon-capital-markets:before { content: '\e870'; } /* '' */
+&.icon-caret-up-down-whitebg:before { content: '\e871'; } /* '' */
+&.icon-caret-up-down:before { content: '\e872'; } /* '' */
+&.icon-cash-management:before { content: '\e873'; } /* '' */
+&.icon-choose-acc:before { content: '\e874'; } /* '' */
+&.icon-client-relationship:before { content: '\e875'; } /* '' */
+&.icon-contact:before { content: '\e876'; } /* '' */
+&.icon-dana-ouline:before { content: '\e877'; } /* '' */
+&.icon-dinamisinvest:before { content: '\e878'; } /* '' */
+&.icon-agency-service-and-syndication:before { content: '\e879'; } /* '' */
+&.icon-bancassurance:before { content: '\e87a'; } /* '' */
+&.icon-banktransaction:before { content: '\e87b'; } /* '' */
+&.icon-bunga-dasar:before { content: '\e87c'; } /* '' */
+&.icon-no-transaction:before { content: '\e8b8'; } /* '' */
+&.icon-telephone-outline:before { content: '\e8b9'; } /* '' */
+&.icon-atoms:before { content: '\e8ba'; } /* '' */
+&.icon-content:before { content: '\e8bb'; } /* '' */
+&.icon-molecules:before { content: '\e8bc'; } /* '' */
+&.icon-organisms:before { content: '\e8bd'; } /* '' */
+&.icon-permata:before { content: '\e8be'; } /* '' */
+&.icon-spacing-and-gridding:before { content: '\e8bf'; } /* '' */
+&.icon-visual:before { content: '\e8c0'; } /* '' */
+&.icon-check-circle:before { content: '\e8c3'; } /* '' */
+&.icon-check:before { content: '\e8c4'; } /* '' */
+&.icon-forgot-password:before { content: '\e8c5'; } /* '' */
+&.icon-forgot-userid:before { content: '\e8c6'; } /* '' */
+&.icon-gopay:before { content: '\e8c7'; } /* '' */
+&.icon-notification:before { content: '\e8c9'; } /* '' */
+&.icon-globe:before { content: '\e8d1'; } /* '' */
+&.icon-apply-simple-pay:before { content: '\e8d3'; } /* '' */
+&.icon-simple-pay-history:before { content: '\e8d4'; } /* '' */
+&.icon-dana-tunai:before { content: '\e8d5'; } /* '' */
+&.icon-mail:before { content: '\e8d6'; } /* '' */
+&.icon-card-view-1:before { content: '\e8d7'; } /* '' */
+&.icon-list-view-1:before { content: '\e8d8'; } /* '' */
+&.icon-buy:before { content: '\e8d9'; } /* '' */
+&.icon-info-mf:before { content: '\e8da'; } /* '' */
+&.icon-installment:before { content: '\e8db'; } /* '' */
+&.icon-insurance:before { content: '\e8dc'; } /* '' */
+&.icon-internet:before { content: '\e8dd'; } /* '' */
+&.icon-transfer-llg:before { content: '\e8de'; } /* '' */
+&.icon-transfer-online:before { content: '\e8df'; } /* '' */
+&.icon-caret-up-whitebg:before { content: '\e8e0'; } /* '' */
+&.icon-securities:before { content: '\e8e1'; } /* '' */
+&.icon-telco:before { content: '\e8e2'; } /* '' */
+&.icon-television:before { content: '\e8e3'; } /* '' */
+&.icon-tx-travel-bill:before { content: '\e8e4'; } /* '' */
+&.icon-virtual-acc-bill:before { content: '\e8e5'; } /* '' */
+&.icon-zakat:before { content: '\e8e6'; } /* '' */
+&.icon-duplicate:before { content: '\e8e7'; } /* '' */
+&.icon-education-2:before { content: '\e8e8'; } /* '' */
+&.icon-export-import:before { content: '\e8e9'; } /* '' */
+&.icon-fav:before { content: '\e8ea'; } /* '' */
+&.icon-filter:before { content: '\e8eb'; } /* '' */
+&.icon-forex:before { content: '\e8ec'; } /* '' */
+&.icon-forgot-userid-1:before { content: '\e8ed'; } /* '' */
+&.icon-fund:before { content: '\e8ee'; } /* '' */
+&.icon-general-loan:before { content: '\e8ef'; } /* '' */
+&.icon-global-market:before { content: '\e8f0'; } /* '' */
+&.icon-guarantee:before { content: '\e8f1'; } /* '' */
+&.icon-health:before { content: '\e8f2'; } /* '' */
+&.icon-hibah:before { content: '\e8f3'; } /* '' */
+&.icon-info-personal:before { content: '\e8f4'; } /* '' */
+&.icon-kurs:before { content: '\e8f6'; } /* '' */
+&.icon-lifestyle:before { content: '\e8f7'; } /* '' */
+&.icon-loanredemption:before { content: '\e8f8'; } /* '' */
+&.icon-maternity:before { content: '\e8f9'; } /* '' */
+&.icon-payable-management:before { content: '\e8fa'; } /* '' */
+&.icon-payroll:before { content: '\e8fb'; } /* '' */
+&.icon-personal-loan-2:before { content: '\e8fc'; } /* '' */
+&.icon-preferred:before { content: '\e8fd'; } /* '' */
+&.icon-priority:before { content: '\e8fe'; } /* '' */
+&.icon-profit:before { content: '\e8ff'; } /* '' */
+&.icon-receivable-management:before { content: '\e900'; } /* '' */
+&.icon-regis:before { content: '\e901'; } /* '' */
+&.icon-rip:before { content: '\e902'; } /* '' */
+&.icon-rlt-child:before { content: '\e903'; } /* '' */
+&.icon-rlt-parents:before { content: '\e904'; } /* '' */
+&.icon-rlt-sibling:before { content: '\e905'; } /* '' */
+&.icon-rlt-spouse:before { content: '\e906'; } /* '' */
+&.icon-salary:before { content: '\e907'; } /* '' */
+&.icon-sales:before { content: '\e908'; } /* '' */
+&.icon-security-service:before { content: '\e909'; } /* '' */
+&.icon-setup-acc:before { content: '\e90a'; } /* '' */
+&.icon-shield:before { content: '\e90b'; } /* '' */
+&.icon-smartphone:before { content: '\e90c'; } /* '' */
+&.icon-sort:before { content: '\e90d'; } /* '' */
+&.icon-statement:before { content: '\e90e'; } /* '' */
+&.icon-swapcard:before { content: '\e90f'; } /* '' */
+&.icon-time-deposit-usd:before { content: '\e910'; } /* '' */
+&.icon-trade:before { content: '\e911'; } /* '' */
+&.icon-transaction-banking:before { content: '\e912'; } /* '' */
+&.icon-travel:before { content: '\e913'; } /* '' */
+&.icon-treasury:before { content: '\e914'; } /* '' */
+&.icon-value-chain:before { content: '\e915'; } /* '' */
+&.icon-wallet:before { content: '\e916'; } /* '' */
+&.icon-wedding:before { content: '\e917'; } /* '' */
+&.icon-wmlink:before { content: '\e918'; } /* '' */
+&.icon-add-kartu-credit:before { content: '\e919'; } /* '' */
+&.icon-investment:before { content: '\e91a'; } /* '' */
+&.icon-atoms-icons-product-personal-ksei:before { content: '\e91d'; } /* '' */
+&.icon-minus:before { content: '\e91e'; } /* '' */
+&.icon-menu:before { content: '\e929'; } /* '' */
+&.icon-activecard:before { content: '\e96a'; } /* '' */
+&.icon-address:before { content: '\e96d'; } /* '' */
+&.icon-apply-mortgage:before { content: '\e96e'; } /* '' */
+&.icon-apply-pl:before { content: '\e96f'; } /* '' */
+&.icon-bonds-1:before { content: '\e971'; } /* '' */
+&.icon-calculator:before { content: '\e973'; } /* '' */
+&.icon-cart:before { content: '\e974'; } /* '' */
+&.icon-cc-increase-temp-limit:before { content: '\e977'; } /* '' */
+&.icon-change-password:before { content: '\e979'; } /* '' */
+&.icon-compare-1:before { content: '\e97a'; } /* '' */
+&.icon-credit-card-1:before { content: '\e97b'; } /* '' */
+&.icon-creditcard:before { content: '\e97c'; } /* '' */
+&.icon-currency:before { content: '\e97d'; } /* '' */
+&.icon-current-1:before { content: '\e97e'; } /* '' */
+&.icon-dana:before { content: '\e980'; } /* '' */
+&.icon-debitcard:before { content: '\e981'; } /* '' */
+&.icon-doku:before { content: '\e982'; } /* '' */
+&.icon-e-statement-password:before { content: '\e983'; } /* '' */
+&.icon-e-statement:before { content: '\e984'; } /* '' */
+&.icon-electric-post-paid:before { content: '\e986'; } /* '' */
+&.icon-electricity-prepaid-2:before { content: '\e987'; } /* '' */
+&.icon-electricity-prepaid-3:before { content: '\e988'; } /* '' */
+&.icon-electricity-prepaid-4:before { content: '\e989'; } /* '' */
+&.icon-electricity-prepaid:before { content: '\e98a'; } /* '' */
+&.icon-fav-setting:before { content: '\e98c'; } /* '' */
+&.icon-favourite:before { content: '\e98d'; } /* '' */
+&.icon-gift-lebaran:before { content: '\e98e'; } /* '' */
+&.icon-gift:before { content: '\e98f'; } /* '' */
+&.icon-gojek:before { content: '\e990'; } /* '' */
+&.icon-maybe-later:before { content: '\e996'; } /* '' */
+&.icon-mortgage-1:before { content: '\e998'; } /* '' */
+&.icon-mutual-funds-1:before { content: '\e999'; } /* '' */
+&.icon-open-savings:before { content: '\e99a'; } /* '' */
+&.icon-ovo:before { content: '\e99c'; } /* '' */
+&.icon-pay-pro:before { content: '\e99d'; } /* '' */
+&.icon-personal-loan-1:before { content: '\e99e'; } /* '' */
+&.icon-puzzle-full:before { content: '\e9a1'; } /* '' */
+&.icon-rdn-joined-balance:before { content: '\e9a2'; } /* '' */
+&.icon-rdn-transaction:before { content: '\e9a3'; } /* '' */
+&.icon-register-sbn:before { content: '\e9a4'; } /* '' */
+&.icon-rename:before { content: '\e9a5'; } /* '' */
+&.icon-savings-month:before { content: '\e9a6'; } /* '' */
+&.icon-savings-1:before { content: '\e9a7'; } /* '' */
+&.icon-sbn-early-redemption-status:before { content: '\e9a8'; } /* '' */
+&.icon-sbn-early-redemption:before { content: '\e9a9'; } /* '' */
+&.icon-setting-recurring:before { content: '\e9ac'; } /* '' */
+&.icon-sid-registration:before { content: '\e9ad'; } /* '' */
+&.icon-sms-sr:before { content: '\e9af'; } /* '' */
+&.icon-sr-ksei:before { content: '\e9b0'; } /* '' */
+&.icon-stock-balance:before { content: '\e9b1'; } /* '' */
+&.icon-stock-joined-balance:before { content: '\e9b2'; } /* '' */
+&.icon-store:before { content: '\e9b3'; } /* '' */
+&.icon-switch:before { content: '\e9b4'; } /* '' */
+&.icon-td-modify-term:before { content: '\e9b5'; } /* '' */
+&.icon-tenor-end:before { content: '\e9b8'; } /* '' */
+&.icon-tenor:before { content: '\e9b9'; } /* '' */
+&.icon-tf-account-number:before { content: '\e9ba'; } /* '' */
+&.icon-tf-mobilephone:before { content: '\e9bb'; } /* '' */
+&.icon-tf-without-currency:before { content: '\e9bc'; } /* '' */
+&.icon-time-deposit-1:before { content: '\e9be'; } /* '' */
+&.icon-mobile-cash:before { content: '\e9c5'; } /* '' */
+&.icon-other-3-dot:before { content: '\e9c6'; } /* '' */
+&.icon-time-deposit-2:before { content: '\e9c8'; } /* '' */
+&.icon-atoms-icons-service-rdn:before { content: '\ea33'; } /* '' */
+&.icon-product-sbn:before { content: '\ea36'; } /* '' */
+&.icon-tf-savings:before { content: '\ea85'; } /* '' */
+&.icon-top-up:before { content: '\ea86'; } /* '' */
+&.icon-transfer:before { content: '\ea87'; } /* '' */
+&.icon-information:before { content: '\eba9'; } /* '' */
+&.icon-cc-bill:before { content: '\ede1'; } /* '' */
+}

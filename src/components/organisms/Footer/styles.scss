@@ -1,0 +1,79 @@
+/* ==========================================================================
+Styles for Footer component
+========================================================================== */
+
+// import mixin and variables
+@import "../../../assets/styles/helper/function", "../../../assets/styles/helper/mixin",
+  "../../../assets/styles/project/init/variables";
+
+// Start styles Footer component
+
+.o-footer {
+    display: table;
+    transition: all 0.25s ease;
+    position: fixed;
+    bottom: 0;
+    margin-top: 24px;
+    z-index: 5;
+    width: 100%;
+    height: 36px;
+    color: color(black);
+    background-color: color(white);
+    
+    &.no-fixed {
+        position: relative;
+    }
+    .col-sm-12 {
+        display: table;
+        margin-left: -12px;
+        @include small {
+            padding-left: 4px;
+            margin-left: 0px;
+            
+        }
+    }
+    .container {
+        padding: .8rem 0;
+        vertical-align: middle;
+        padding-left: 0;
+        @include small {
+            padding-left: 16px;
+        }
+    }
+    @include small {
+        height: auto;
+        
+    }
+    .container {
+        position: relative;
+        z-index: 2;
+        .row > div {
+            @include clearfix;
+        }
+    }
+    
+    .title-footer {
+        animation: animateLeft .8s ease-in;
+        &::before {
+            content:"\00a9";
+            font-size: 14px;
+            margin-right: 4px;
+        }
+        font-size: 14px !important;
+        line-height: 20px;
+    }
+
+}
+
+@include keyframes( animateLeft )
+{
+    0% {
+        opacity: 0;
+        transform: translateX(-8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}

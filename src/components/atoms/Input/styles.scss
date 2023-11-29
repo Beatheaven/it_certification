@@ -1,0 +1,119 @@
+/* ==========================================================================
+Styles for Input component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Input component
+
+.o-input {
+  position: relative;
+  .text-prepend {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    top: 32px;
+    height: 46px;
+    width: 46px;
+    font-size: 16px;
+  }
+  .text-title {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 8px;
+    color: color(white);
+    text-align: left;
+    &.black {
+      color: #171a1c;
+    }
+  }
+  input {
+    // border: solid 2px color(gray, 50);
+    // position: relative;
+    // width: auto;
+    // height: 46px;
+    // font-size: 16px;
+    // line-height: 24px;
+    // color: #73808c;
+    // border-radius: 4px;
+    // text-indent: 10px;
+    border: none;
+    background: none;
+    border-bottom: 1px solid #73808c; /* Ganti dengan warna yang Anda inginkan */
+    outline: none;
+    &.small {
+      width: 248px !important;
+      @include small {
+        width: 100%;
+      }
+    }
+
+
+
+    &.half {
+      width: 50%;
+      @include small {
+        min-width: 100%;
+      }
+    }
+
+    &.default {
+      width: 344px;
+      @include small {
+        width: 100%;
+      }
+    }
+
+    &.extra-small {
+      width: 200px;
+      @include small {
+        width: 100%;
+      }
+    }
+
+    &.prepended {
+      padding-left: 46px;
+    }
+
+    @include small {
+      min-width: 100%;
+    }
+
+    &.width-full {
+      width: 100%;
+    }
+  }
+
+  &.title-black {
+    .text-title {
+      color: color(black);
+    }
+  }
+
+  &.input-gray {
+    input {
+      color: #171a1c;
+      background-color: color(gray, 20);
+    }
+  }
+
+  &.input-red {
+    input {
+      border: 2px solid red;
+      color: #171a1c;
+      background-color: color(gray, 20);
+    }
+  }
+
+  .o--text-body {
+    margin-top: 4px;
+  }
+
+  input:focus{
+    border-bottom: 1px solid #73808c;
+  }
+}

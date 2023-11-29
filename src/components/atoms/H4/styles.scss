@@ -1,0 +1,48 @@
+/* ==========================================================================
+Styles for H4 component
+========================================================================== */
+
+// import mixin and variables
+@import "../../../assets/styles/helper/function",
+"../../../assets/styles/helper/mixin",
+"../../../assets/styles/project/init/variables";
+
+// Start styles H4 component
+.a-h4 {
+    font-size: fz(h4);
+    line-height: lh(h4);
+    @include font-weight-heading;
+    @include colors-all-font;
+    @include small {
+        font-size: fz(mh4);
+        line-height: lh(mh4);
+    }
+
+    &.black {
+        color: color(black) !important;
+    }
+
+    &.red {
+      color: red !important;
+    }
+
+    &.light {
+      font-weight: 200;
+    }
+
+    &.error {
+        color: #E93C3C !important;
+    }
+
+    &.medium {
+      font-weight: 500;
+    }
+
+    &.bold {
+        font-weight: 600;
+    }
+
+    &.success {
+      color: #1AB759 !important;
+    }
+}

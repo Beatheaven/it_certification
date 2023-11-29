@@ -1,0 +1,20 @@
+@each $spacing in $spacing-list {
+    .mt-#{$spacing} { margin-top: #{$spacing / 10}rem !important; }
+    .mr-#{$spacing} { margin-right: #{$spacing / 10}rem !important; }
+    .mb-#{$spacing} { margin-bottom: #{$spacing / 10}rem !important; }
+    .ml-#{$spacing} { margin-left: #{$spacing / 10}rem !important; }
+    .my-#{$spacing} { margin-top: #{$spacing / 10}rem !important; margin-bottom: #{$spacing / 10}rem !important; }
+    .mx-#{$spacing} { margin-left: #{$spacing / 10}rem !important; margin-right: #{$spacing / 10}rem !important; }
+    .m-#{$spacing} { margin: #{$spacing / 10}rem !important; }
+    .pt-#{$spacing} { padding-top: #{$spacing / 10}rem !important; }
+    .pr-#{$spacing} { padding-right: #{$spacing / 10}rem !important; }
+    .pb-#{$spacing} { padding-bottom: #{$spacing / 10}rem !important; }
+    .pl-#{$spacing} { padding-left: #{$spacing / 10}rem !important; }
+    .py-#{$spacing} { padding-top: #{$spacing / 10}rem !important; padding-bottom: #{$spacing / 10}rem !important; }
+    .px-#{$spacing} { padding-left: #{$spacing / 10}rem !important; padding-right: #{$spacing / 10}rem !important; }
+    .p-#{$spacing} { padding: #{$spacing / 10}rem !important; }
+}
+  
+.d-i {
+    display: inline;
+}

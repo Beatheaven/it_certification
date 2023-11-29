@@ -1,0 +1,107 @@
+/* ==========================================================================
+Styles for Header Banner component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Header Banner component
+
+.o-header-banner {
+  height: 328px;
+  width: 100%;
+  display: block;
+  background-color: color(primary, 100);
+  position: relative;
+  border-bottom-right-radius: 220px;
+
+  background-size: cover;
+
+  &__img-wrapper {
+    position: absolute;
+    overflow: hidden;
+    right: 0;
+    img {
+      border-bottom-right-radius: 220px;
+      height: 328px;
+    }
+    &--d {
+      display: block;
+
+      @include small {
+        display: none;
+      }
+    }
+
+    &--m {
+      display: none;
+
+      @include small {
+        display: block;
+      }
+    }
+  }
+
+  @include medium {
+    &__text {
+      font-size: 16px;
+      line-height: 24px;
+      color: color(white);
+      padding-left: 0px;
+      padding-top: 4px;
+    }
+  }
+
+  @include small {
+    position: relative;
+    height: 288px;
+    border-bottom-right-radius: 80px;
+    &__img-wrapper {
+      position: absolute;
+      overflow: hidden;
+      right: 0;
+      img {
+        border-bottom-right-radius: 0px;
+        height: 194px;
+      }
+    }
+    &__text-wrapper {
+      padding: 32px 0px !important;
+      width: 72%;
+    }
+  }
+  &__text-wrapper {
+    overflow: hidden;
+    padding: 80px 0px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 24px;
+    color: color(white);
+    padding-left: 0px;
+    padding-top: 4px;
+  }
+
+  &__text-nav-wrapper {
+    display: table;
+    margin-bottom: 8px;
+    .a-links {
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .a-system-icon {
+      display: table-cell;
+      vertical-align: middle;
+      color: color(white);
+      font-size: 16px;
+      padding: 0px 2px;
+    }
+
+    @include small {
+      display: none;
+    }
+  }
+}

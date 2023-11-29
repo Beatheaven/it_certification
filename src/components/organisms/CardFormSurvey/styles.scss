@@ -1,0 +1,210 @@
+/* ==========================================================================
+Styles for Card Form Survey component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Card Form Survey component
+
+.o-card-form-vertikal {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  @include small {
+    width: 100%;
+    margin: 0;
+  }
+  &__sidebar {
+    min-width: 342px;
+    min-height: 630px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    float: left;
+    &.gray {
+      background-color: #f9f9f9;
+      border: 1px solid #dadada;
+    }
+    &.white {
+      background-color: color(white);
+    }
+
+    &__text-content-sidebar {
+      width: 100%;
+      display: table;
+      .oval-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+        float: left;
+      }
+      .text-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+        float: left;
+      }
+
+      &--d {
+        display: block;
+        padding: 30px 20px 30px 26px;
+        @include small {
+          display: none;
+        }
+      }
+
+      &--m {
+        display: none;
+        @include small {
+          background-color: color(white);
+          width: 100%;
+          padding: 20px;
+          display: table;
+          .text-left-page {
+            padding-left: 8px;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 500;
+            font-style: normal;
+          }
+
+          .title-left {
+            color: #00529c;
+            display: table-cell;
+            vertical-align: middle;
+            float: left;
+          }
+          .title-right {
+            display: table-cell;
+            vertical-align: middle;
+            float: right;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+
+    @include small {
+      margin-left: 0;
+      margin-bottom: 20px;
+      width: 100%;
+      height: 100px;
+      background-color: color(white);
+      border-radius: 8px;
+    }
+
+    .line-v {
+      margin-left: 11px;
+      border-left: 1px solid #528de0;
+      height: 20px;
+      @include small {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 40px;
+    width: 50%;
+    background-color: color(white);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    @include shadow('on-white');
+    float: left;
+    margin-left: 26px;
+    margin-bottom: 5rem;
+
+    @include small {
+      padding: 20px;
+      margin-left: 0;
+      width: 100% !important;
+    }
+
+    h4 {
+      margin-bottom: 4rem;
+      font-weight: 700;
+    }
+
+    ol {
+      font-size: 18px;
+      li.disabled {
+        color: color(grey, 50);
+        > * {
+          color: color(grey, 50);
+        }
+      }
+    }
+
+    .o-input {
+      margin-bottom: 20px;
+      &.r {
+        display: table-cell;
+        vertical-align: middle;
+        @include small {
+          display: block;
+        }
+      }
+      &.l {
+        display: table-cell;
+        vertical-align: middle;
+        @include small {
+          display: block;
+        }
+      }
+    }
+
+    .form-wrapper {
+      display: table;
+      position: relative;
+      width: 100%;
+      margin-bottom: 20px;
+      @include small {
+        margin-top: 1rem;
+      }
+    }
+
+    .form-relative {
+      display: block;
+      position: relative;
+      width: 100%;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .form-line {
+      border-top: 1px solid #dadada;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+      @include small {
+        margin-top: 4rem;
+      }
+    }
+
+    .button-wrapper {
+      display: table;
+      position: relative;
+      width: 100%;
+      margin-top: 5rem;
+      .a-button {
+        @include small {
+          margin-top: 1rem;
+        }
+        &.primary {
+          display: table-cell;
+          vertical-align: middle;
+          width: 200px;
+          float: right;
+          text-transform: uppercase;
+        }
+        &.secondary {
+          display: table-cell;
+          vertical-align: middle;
+          float: left;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

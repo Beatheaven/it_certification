@@ -1,0 +1,43 @@
+/* ==========================================================================
+Styles for SideBar Menu component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Stepper Form Vertikal component
+
+.o-sidebar-menu {
+  display: table-cell;
+  vertical-align: middle;
+  &__step-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    height: 30px;
+    width: 30px;
+    i {
+      font-size: 20px;
+    }
+  }
+
+  &__text-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 24px;
+    font-size: 16px;
+    padding-top: 1px;
+    padding-left: 10px;
+    display: table-cell;
+    @include small {
+      padding-left: 10px;
+      padding-right: 0px;
+    }
+  }
+  &.is-active .a-navitem {
+    color: #ff6500;
+    font-weight: bold;
+  }
+}

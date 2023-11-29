@@ -1,0 +1,28 @@
+/* ==========================================================================
+Styles for IUMKM component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+'../../../assets/styles/helper/mixin',
+'../../../assets/styles/project/init/variables';
+
+// Start styles IUMKM component
+.o-iumkm {
+  min-height: 100vh;
+  width: 100%;
+  background-color: color(gray, 20);
+
+  .i-umkm-header {
+    width: 100%;
+    height: 74px;
+	}
+	.wrapper__o-card {
+		position: relative;
+		z-index: 2;
+    margin-top: -100px;
+    &-collapse {
+      margin-top: -70px;
+    }
+	}
+}

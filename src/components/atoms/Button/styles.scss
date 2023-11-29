@@ -1,0 +1,118 @@
+/* ==========================================================================
+Styles for Button component
+========================================================================== */
+
+// import mixin and variables
+@import "../../../assets/styles/helper/function",
+  "../../../assets/styles/helper/mixin",
+  "../../../assets/styles/project/init/variables";
+
+// Start styles Button component
+
+.a-button {
+    display: inline-block;
+    outline: 0;
+    text-align: center;
+    min-width: 200px;
+    min-height: 48px;
+    padding: 7px 31px;
+    font-size: fz(button-default);
+    font-weight: fw(reguler);
+    line-height: lh(button-default);
+    letter-spacing: 0.12px;
+    border: solid 1px color(grey, 50);
+    border-radius: 5px;
+    background-color: color(grey, 50);
+    color: color(white);
+    transition: all 0.25s ease;
+    text-decoration: none;
+    cursor: pointer;
+
+    @include active-visited-target-blank-button {
+        border: solid 1px color(grey, 50);
+        background-color: color(grey, 50);
+        color: color(white);
+    }
+    @include hover-button("default");
+    @include small {
+        font-size: fz(mbutton-default);
+        line-height: lh(mbutton-default);
+        min-width: 100%;
+        min-height: 40px;
+        padding: 3px 31px 3px;
+    }
+    &.primary {
+        color: color(white);
+        background-color: color(red,100);
+        border-color: color(red,100);
+        @include active-visited-target-blank-button {
+            background-color: color(red, 100);
+            border-color: color(red, 100);
+        }
+        @include hover-button("primary");
+        @media (hover: none) {
+            &:hover {
+              background-color: color(red, 100);
+              border-color: color(red, 100);
+            }
+            &:active {
+              background-color: color(red, 120);
+              border-color: color(red, 120);
+            }
+        }
+    }
+    &.inactive-primary {
+        color: #C7CCD1;
+        background-color: #F8F7F7;
+        cursor: not-allowed;
+        pointer-events: none;
+        border-color: transparent;
+    }
+
+    &.transparent{
+      background-color: Transparent;
+      border-color: color(red,100);
+      color: black;
+      background-repeat:no-repeat;
+      // border: none;
+      cursor:pointer;
+      overflow: hidden;
+      outline:none;
+      text-align: left;
+      left: 0;
+    }
+
+    &.secondary {
+        color: color(rgb(0, 0, 0));
+        background-color: (transparent);
+        border-color: color(rgb(0, 0, 0));
+        &:focus {
+            border-style:solid !important;
+            border-width: 1px !important;
+        }
+        &.btn-google {
+            background-image: url('https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg');
+            background-repeat: no-repeat;
+            background-position: 6px center;
+            padding-left: 80px;
+        }
+        @include active-visited-target-blank-button {
+            color: color(red, 100);
+            background-color: transparent;
+            border-color: color(primary, 100);
+        }
+        @include hover-button("secondary");
+        @media (hover: none) {
+            &:hover {
+                background-color: transparent;
+                border-color: color(red, 100);
+                color: color(red, 100);
+            }
+            &:active {
+                background-color: color(red, 75);
+                color: color(white);
+                border-color: color(red, 75);
+            }
+        }
+    }
+}

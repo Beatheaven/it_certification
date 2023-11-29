@@ -1,0 +1,19 @@
+/* ==========================================================================
+Styles for Comingsoon component
+========================================================================== */
+
+// import mixin and variables
+@import "../../../assets/styles/helper/function", "../../../assets/styles/helper/mixin", "../../../assets/styles/project/init/variables";
+
+// Start styles Comingsoon component
+.p-error404 {
+  img {
+    width: 240px;
+    @include small {
+      width: 200px;
+    }
+    @include iphone5 {
+      width: 176px;
+    }
+  }
+}

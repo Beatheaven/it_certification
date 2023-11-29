@@ -1,0 +1,65 @@
+/* ==========================================================================
+Styles for Card Simple Button
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Card Simple Button
+
+.o-card-simple-button {
+  height: 88px;
+  width: 100%;
+  background-color: color(white);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  // animation: animateTop .5s ease-in;
+  @include shadow('on-white');
+  @include medium {
+    height: 173px;
+  }
+  &_wrapper {
+    padding: 0px 40px;
+    height: 100%;
+    display: table;
+    @include medium {
+      display: block;
+      padding: 20px 20px;
+    }
+    .title-card-wrapper {
+      display: table-cell;
+      vertical-align: middle;
+      @include medium {
+        display: block;
+      }
+    }
+    .date-wrapper {
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 4px;
+      @include medium {
+        display: block;
+        padding-left: 0;
+        padding-top: 4px;
+        .bold {
+          font-weight: 500;
+        }
+      }
+    }
+    .a-button-wrapper {
+      position: absolute;
+      right: 0;
+      margin-right: 40px;
+      .a-button {
+        margin-top: 20px;
+      }
+
+      @include medium {
+        margin-right: 0px;
+        position: relative;
+      }
+    }
+  }
+}

@@ -1,0 +1,145 @@
+/* ==========================================================================
+Styles for ProfilePicture component
+========================================================================== */
+
+// import mixin and variables
+@import "../../../assets/styles/helper/function", "../../../assets/styles/helper/mixin",
+  "../../../assets/styles/project/init/variables";
+
+// Start styles ProfilePicture component
+.a-avatar {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -8px;
+    border-radius: 50%;
+    color: color(white);
+    text-transform: uppercase;
+    font-weight: fw(bold);
+    text-align: center;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    right: 0;
+    position: absolute;
+    background-color: color(grey,100);
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    h3 {
+        margin: 0;
+        font-size: fz(avatar32);
+        position: absolute;
+        left: 0;
+        width: 100%;
+        padding: 0 4px;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .a-system-icon,
+    .a-product-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .a-system-icon {
+            color: color(white);
+            font-size: fz(avatarIcon32);
+    }
+    .a-product-icon {
+            width: 24px;
+            height: auto;
+    }
+
+    &.primary120 {
+        background-color: color(primary, 120);
+    }
+
+    &.primary100 {
+        background-color: color(primary, 100);
+    }
+
+    &.primary75 {
+        background-color: color(primary, 75);
+    }
+
+    &.grass100 {
+        background-color: color(grass, 100);
+    }
+
+    &.grass75 {
+        background-color: color(grass, 75);
+    }
+
+    &.navy100 {
+        background-color: color(navy, 100);
+    }
+
+    &.red100 {
+        background-color: color(red, 100);
+    }
+
+
+    &.size-40 {
+        width: 40px;
+        height: 40px;
+        h3 {
+            font-size: fz(avatar48);
+        }
+        .a-system-icon {
+            font-size: fz(avatarIcon48);
+        }
+        .a-product-icon {
+            width: 32px;
+        }
+    }
+    &.size-64 {
+        width: 64px;
+        height: 64px;
+        h3 {
+            font-size: fz(avatar64);
+        }
+        .a-system-icon {
+            font-size: fz(avatarIcon64);
+        }
+        .a-product-icon {
+            width: 40px;
+        }
+    }
+    &.size-80 {
+        width: 80px;
+        height: 80px;
+        h3 {
+            font-size: fz(avatar80);
+        }
+        .a-system-icon {
+            font-size: fz(avatarIcon80);
+        }
+        .a-product-icon {
+            width: 48px;
+        }
+    }
+    &.outline {
+        border: solid 1px color(grey, 100);
+        background-color: transparent;
+        h3,
+        .a-system-icon {
+            color: color(primary, 100);
+        }
+    }
+    //is have notification
+    &.has-badge {
+        overflow: initial;
+        .a-notification {
+        height: 8px;
+        min-width: 8px;
+        max-width: 8px;
+        position: absolute;
+        right: 0;
+        }
+    }
+}

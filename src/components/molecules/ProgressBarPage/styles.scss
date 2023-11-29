@@ -1,0 +1,59 @@
+/* ==========================================================================
+Styles for ProgressBarPage component
+========================================================================== */
+
+// import mixin and variables
+@import "../../../assets/styles/helper/function", "../../../assets/styles/helper/mixin",
+  "../../../assets/styles/project/init/variables";
+
+// Start styles ProgressBar Page component
+
+.o-progress-bar-page {
+  display: table;
+  width:100%;
+  @include small {
+    padding:20px;
+    display: block;
+  }
+
+    &__wrapper{
+      padding-top: 40px 0 !important;
+    }
+
+    .title-progress-bar-wrapper{
+      display: table-cell;
+      vertical-align: middle;
+      float: left;
+      h4 {
+        margin: 4px 0 0 0;
+      }
+      &__subs {
+        display: table-cell;
+        color: color(primary, 100);
+        @include small {
+          display: none;
+        }
+      }
+      @include small {
+        display: block;
+        padding-bottom: 12px;
+      }
+
+    }
+
+    .subtitle-progress-bar-wrapper{
+      display: table-cell;
+      vertical-align: middle;
+      float: right;
+      @include small {
+        display:block;
+      }
+
+    }
+    .bar-progress-bar-wrapper {
+      @include small {
+        display: block;
+      }
+    }
+}
+

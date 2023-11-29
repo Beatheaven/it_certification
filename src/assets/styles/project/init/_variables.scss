@@ -1,0 +1,378 @@
+/* ==========================================================================
+   VARIABLES
+   ========================================================================== */
+
+/* ----------------------
+  - COLORS
+  ---------------------- */
+  $colors: (
+    // primary colors
+    primary:(
+      150: #003666,
+      120: #00427D,
+      100: #00529C,
+      90: #298779,
+      75: #40a696,
+      50: #7fc3b9
+    ),
+    // secondary colors
+    cyan: (
+      150: #035f64,
+      120: #00848b,
+      100: #00a4ad,
+      75: #40bbc2,
+      50: #7fd1d6,
+      25: #bfe8ea
+    ),
+    red: (
+      150: #6d0d18,
+      120: #810e1c,
+      100: #a51525,
+      75: #c31c2f,
+      50: #cb182d,
+      25: #ff1f39
+    ),
+    blue: (
+      150: #003257,
+      120: #03497c,
+      100: #006ebf,
+      75: #3fb3df,
+      50: #7fb6df,
+      25: #bfdbef
+    ),
+    navy:(
+      150: #162843,
+      120: #1f3658,
+      100: #2c4c7c,
+      75: #39598a,
+      50: #556c8d,
+      25: #818fa4
+    ),
+    grass: (
+      150: #02593c,
+      120: #028357,
+      100: #00b175,
+      75: #40c598,
+      50: #7fd8ba,
+      25: #bfebdc
+    ),
+    brown: (
+      150: #7c4a05,
+      120: #975802,
+      100: #bc6d00,
+      75: #c98b36,
+      50: #d3a76b,
+      25: #fcd59e
+    ),
+    dark-yellow: (
+      150: #785d13,
+      120: #a47d12,
+      100: #d09900,
+      75: #e4a700,
+      50: #fcb800,
+      25: #ffda75
+    ),
+    blue-sky: (
+      150: #276b84,
+      120: #3186a6,
+      100: #3fb3df,
+      75: #6bd6ff,
+      50: #a8e7ff,
+      25: #cff2ff
+    ),
+    // background
+    british-green: (
+      100: #001c11,
+      75: #002c19,
+      50: #005435,
+      25: #00663c
+    ),
+    maroon: (
+      100: #21080f,
+      75: #2c0b14,
+      50: #481120,
+      25: #641b30
+    ),
+    priority-black: (
+      100: #0c0c0c,
+      75: #161616,
+      50: #1f1f1f,
+      25: #313131
+    ),
+    // shades
+    black: #121f26,
+    white: #fff,
+    grey: (
+      150: #23343f,
+      125: #425866,
+      100: #677e8c,
+      75: #a3b5bf,
+      50: #c5d1d8,
+      25: #ebeff2,
+      20: #F1F3F5
+    ),
+    // system feedback
+    system: (
+      error: #E93C3C,
+      warning: #FFBC1F,
+      successful: #1AB759
+    ),
+    // illustration and content icons
+    fuschia: (
+      100: #c71c41,
+      75: #e1224b,
+      50: #ff2856
+    ),
+    midnight: (
+      150: #2f335d,
+      100: #2d327a,
+      75: #29619c,
+      50: #3d8bdd
+    ),
+    turquoise: (
+      100: #35af89,
+      75: #39bc93,
+      50: #43daab
+    ),
+    sun: (
+      100: #d09900,
+      75: #e4a700,
+      50: #fcb800,
+      25: #ffd721
+    ),
+    green: (
+      100: #78b316,
+      75: #94c83c,
+      50: #b4e169
+    ),
+    purple: (
+      100: #69267e,
+      75: #863f9c,
+      50: #a262b5
+    ),
+    violet:(
+      100: #b2105a,
+      75: #c52870,
+      50: #ed3d87
+    ),
+    // overlay
+    overlay: (
+      80: rgba(#000, .8),
+      50: rgba(#000, .5),
+      20: rgba(#000, .2)
+    ),
+  );
+  
+  $gradient: (
+    blue: (
+      0: #234b80,
+      100: #2e6cad
+    ),
+    brown: (
+      0: #754503,
+      100: #956118
+    ),
+    cyan: (
+      0: #00757c,
+      100: #00a4ad
+    ),
+    light-blue: (
+      0: #00729e,
+      100: #11b0ec
+    ),
+    red: (
+      0: #e65500,
+      100: #c31c2f
+    ),
+    green:(
+      0: #015b4d,
+      100: #006757
+    ),
+    green-grass: (
+      0: #008873,
+      100: #00b175
+    ),
+    sun: (
+      0: #d09900,
+      100: #fcb800
+    ),
+    grey: (
+      0: #697e8b,
+      100: #425866
+    )
+  );
+  
+  /* ----------------------
+    - FONT
+    ---------------------- */
+  // Font Family
+  $ff-main: "Poppins", sans-serif;
+  
+  // Font Size
+  $fz: (
+    greetings: 8.4rem,
+    mgreetings: 4.2rem,
+    conversational-single: 4rem,
+    // mconversational-single: 2.4rem,
+    mconversational-single: 2.6rem,
+    conversational-multiple: 3rem,
+    mconversational-multiple: 1.8rem,
+    form-default: 3.2rem,
+    mform-default: 2rem,
+    form-small: 2.4rem,
+    mform-small: 1.6rem,
+    h1: 4.8rem,
+    mh1: 3.2rem,
+    h2: 3.6rem,
+    mh2: 2.4rem,
+    lmh2: 3.2rem,
+    h3: 2.4rem,
+    mh3: 2rem,
+    lh3: 3.2rem,
+    mlh3: 2.4rem,
+    h4: 1.6rem,
+    mh4: 1.6rem,
+    body: 2rem,
+    mbody: 1.6rem,
+    info: 1.6rem,
+    minfo: 1.4rem,
+    action: 1.2rem,
+    maction: 1.2rem,
+    label: 1.2rem,
+    mlabel: 1rem,
+    error-message: 1.2rem,
+    top-nav: 1.6rem,
+    lh-top-nav: 2.4rem,
+    mtop-nav: 1.2rem,
+    side-toolbar: 2rem,
+    links-body: 2rem,
+    mlinks-body: 1.6rem,
+    links-info: 1.6rem,
+    mlinks-info: 1.4rem,
+    button-default: 1.6rem,
+    mbutton-default: 1.4rem,
+    button-cozy: 2rem,
+    mbutton-cozy: 1.6rem,
+    button-compact: 1.2rem,
+    avatar32: 1.2rem,
+    avatarIcon32: 1.6rem,
+    avatar48: 1.8rem,
+    avatarIcon48: 2.4rem,
+    avatar64: 2rem,
+    avatarIcon64: 3.2rem,
+    avatar80: 2.4rem,
+    avatarIcon80: 4rem
+  );
+  
+  // Line Height
+  $lh: (
+    greetings: 1.05,
+    mgreetings: 1.14,
+    conversational-single: 1.4,
+    // mconversational-single: 1.25,
+    mconversational-single: 1.54,
+    conversational-multiple: 1.33,
+    mconversational-multiple: 1.67,
+    form-default: 1.25,
+    // mform-default: 1.2,
+    mform-default: 1.54,
+    form-small: 1.33,
+    mform-small: 1.5,
+    h1: 1.2,
+    mh1: 1.2,
+    h2: 1.4,
+    mh2: 1.33,
+    h3: 1.6,
+    mh3: 1.78,
+    h4: 1.33,
+    mh4: 1.5,
+    body: 1.6,
+    mbody: 1.5,
+    info: 1.5,
+    minfo: 1.71,
+    action: 2,
+    maction: 2,
+    label: 1.33,
+    mlabel: 1.6,
+    error-message: 1.5,
+    top-nav: 2,
+    mtop-nav: 1.33,
+    side-toolbar: 1.6,
+    links-body: 1.6,
+    mlinks-body: 1.5,
+    links-info: 1.2,
+    mlinks-info: 1.14,
+    button-default: 1.5,
+    mbutton-default: 1.71,
+    button-cozy: 1.6,
+    mbutton-cozy: 1.5,
+    button-compact: 1.33
+  );
+  
+  // Font Weight
+  $fw: (
+    light: 300,
+    reguler: 400,
+    bold: 700,
+    black: 900
+  );
+  
+  /* ----------------------
+    - RADIUS
+    ---------------------- */
+  $radius: 2rem;
+  
+  /* ----------------------
+    - SCREEN
+    ---------------------- */
+  $screen: (
+    large: 1440px,
+    medium: 1024px,
+    small: 896px,
+    phone: 480px,
+    iphone5: 320px
+  );
+  
+  /* ----------------------
+    - SHADOW
+    ---------------------- */
+  $shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+  $shadow-bold: 0 2px 15px 0 rgba(0, 0, 0, 0.1), 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+  
+  /* ----------------------
+    - SPACING
+    ---------------------- */
+  $spacing-4: 0.4rem;
+  $spacing-8: 0.8rem;
+  $spacing-16: 1.6rem;
+  $spacing-24: 2.4rem;
+  $spacing-32: 3.2rem;
+  $spacing-40: 4rem;
+  $spacing-48: 4.8rem;
+  $spacing-56: 5.6rem;
+  $spacing-64: 6.4rem;
+  $spacing-list: 0 4 8 16 24 32 40 48 56 64 72;
+  
+  /* ----------------------
+    - Z-INDEX
+    ---------------------- */
+  $z-header: 9;
+  $z-header-navigation-menu: 2;
+  $z-header-navigation-section: 4;
+  $z-header-bg-navigation: 3;
+  $z-blank-screen: 13;
+  $z-loader-page: 14;
+  $z-card-header-slider: 11;
+  $z-popup: 13;
+  $z-button-overlay: 2;
+  $z-toggle-dashboard: 10;
+  $z-input-dropdown-bg: 4;
+  $z-input-dropdown: 5;
+  $z-login-container: 10;
+  $z-login-bg-mobile: 10;
+  $z-product-cards: 3;
+  $z-product-cards-mobile: 10;
+  $z-form-datepicker: 6;
+  $z-keranjang-check: 1;
+  $z-keranjang-checkout-total: 15;
+  

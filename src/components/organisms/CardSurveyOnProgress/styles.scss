@@ -1,0 +1,130 @@
+/* ==========================================================================
+Styles for Card Dashboard component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Card Dashboard component
+
+.o-card-survey-onprogress {
+  position: relative;
+  height: 312px;
+  width: 100%;
+  background-color: color(white);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  @include shadow('on-white');
+  @include small {
+    min-height: 460px;
+  }
+  &__image-wrapper {
+    width: 252px;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    @include small {
+      position: relative;
+      height: 80px;
+    }
+    img {
+      border-bottom-left-radius: 8px;
+      border-top-left-radius: 8px;
+      width: 252px;
+      height: 100%;
+      object-fit: cover;
+      padding-bottom: 43px;
+
+      @include small {
+        width: 100px;
+        height: 80px;
+        padding-bottom: 0;
+      }
+    }
+    &--d {
+      display: block;
+
+      @include small {
+        display: none;
+      }
+    }
+
+    &--m {
+      display: none;
+
+      @include small {
+        display: block;
+      }
+    }
+  }
+  &__wrapper {
+    height: 192px;
+    padding-left: 20%;
+    display: table;
+
+    @include small {
+      padding-top: 0px;
+      padding-left: 0;
+      padding-right: 24px;
+    }
+  }
+
+  &__text-wrapper {
+    width: 70%;
+    padding-top: 40px;
+    padding-left: 32px;
+    display: table-cell;
+    vertical-align: middle;
+    h4 {
+      padding-bottom: 8px;
+    }
+    @include small {
+      width: 100%;
+      padding-left: 20px !important;
+      padding-right: 0px !important;
+      display: block;
+    }
+
+    @include large {
+      width: 100%;
+      padding-left: 100px;
+      padding-right: 50px;
+      display: block;
+    }
+  }
+
+  &__button-wrapper {
+    .a-button {
+      right: 40px;
+      top: 40%;
+      position: absolute;
+      min-width: 100px;
+
+      @include small {
+        right: 0 !important;
+        top: 0 !important;
+        float: right;
+        position: relative;
+        display: block;
+      }
+
+      @include large {
+        right: 45px;
+        top: 20px;
+        float: right;
+        position: relative;
+        display: block;
+      }
+    }
+  }
+  .o-progress-bar-page__wrapper {
+    margin-top: 16px;
+    .row {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+}

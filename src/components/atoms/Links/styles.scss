@@ -1,0 +1,136 @@
+/* ==========================================================================
+Styles for Links component
+========================================================================== */
+
+// import mixin and variables
+@import "../../../assets/styles/helper/function", "../../../assets/styles/helper/mixin",
+  "../../../assets/styles/project/init/variables";
+
+// Start styles Links component
+.a-links {
+    text-decoration: none;
+    color: color(primary, 100);
+    transition: color .25s ease;
+    @include font-weight-default-reguler;
+    &:hover,
+    &:active {
+        color: color(primary, 120);
+    }
+    &.links-body {
+        font-size: fz(links-body);
+        line-height: lh(links-body);
+        @include small {
+            font-size: fz(mlinks-body);
+            line-height: lh(mlinks-body);
+        }
+    }
+    &.links-additional-info {
+        font-size: fz(links-info);
+        line-height: lh(links-info);
+        @include small {
+            font-size: fz(mlinks-info);
+            line-height: lh(mlinks-info);
+        }
+    }
+    &.red {
+        color: color(system, error);
+        &:hover,
+        &:active {
+            color: color(system, error);
+        }
+    }
+    &.white {
+        color: color(white);
+        &:hover,
+        &:active {
+            color: color(grey, 50);
+        }
+    }
+    &.black {
+      color: color(black);
+      &:hover,
+      &:active {
+          color: color(navy, 50);
+      }
+    }
+    &.red{
+        color: color(red, 100);
+        &:hover,
+        &:active{
+            color: color(red, 120);
+        }
+    }
+    &.cyan{
+        color: color(cyan, 100);
+        &:hover,
+        &:active{
+            color: color(cyan, 120);
+        }
+    }
+    &.blue{
+        color: color(blue, 100);
+        &:hover,
+        &:active{
+            color: color(blue, 120);
+        }
+    }
+    &.navy{
+        color: color(navy, 100);
+        &:hover,
+        &:active{
+            color: color(navy, 120);
+        }
+    }
+    &.brown{
+        color: color(brown, 100);
+        &:hover,
+        &:active{
+            color: color(brown, 120);
+        }
+    }
+    &.dark-yellow{
+        color: color(dark-yellow, 100);
+        &:hover,
+        &:active{
+            color: color(dark-yellow, 120);
+        }
+    }
+    &.blue-sky{
+        color: color(blue-sky, 100);
+        &:hover,
+        &:active{
+            color: color(blue-sky, 120);
+        }
+    }
+    &.grass{
+        color: color(grass, 100);
+        &:hover,
+        &:active{
+            color: color(grass, 120);
+        }
+    }
+    &.navy100{
+        color: color(navy, 100);
+        &:hover,
+        &:active{
+            color: darken(color(navy, 100), 2.5%);
+        }
+    }
+    &.gray{
+        color: #73808C;
+        &:hover,
+        &:active{
+            color: #73808C;
+        }
+    }
+    &.underline {
+        text-decoration: underline;
+    }
+    &:hover{
+        color: color(grey, 100);
+        // text-decoration: underline;
+        @include small{
+            text-decoration: none;
+        }
+    }
+}

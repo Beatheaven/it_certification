@@ -1,0 +1,16 @@
+/* ==========================================================================
+   Mixin: Shadow
+   ========================================================================== */
+
+   @mixin shadow($type) {
+  
+    @if $type == 'on-white' {
+        box-shadow: $shadow-on-white;
+    } @else if $type == 'on-gray' {
+        box-shadow: $shadow-on-gray;
+    } @else if $type == 'on-white-card' {
+        box-shadow: $shadow-on-white-card;
+    } @else if $type == 'on-hover' {
+        box-shadow: $shadow-on-hover;
+    }
+}

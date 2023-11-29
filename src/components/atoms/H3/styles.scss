@@ -1,0 +1,44 @@
+/* ==========================================================================
+Styles for H3 component
+========================================================================== */
+
+// import mixin and variables
+@import "../../../assets/styles/helper/function",
+"../../../assets/styles/helper/mixin",
+"../../../assets/styles/project/init/variables";
+
+// Start styles H3 component
+.a-h3 {
+    font-size: fz(h3);
+    line-height: lh(lh3);
+    @include font-weight-heading;
+    @include colors-all-font;
+    @include small {
+        font-size: fz(mh3);
+        line-height: lh(mlh3);
+    }
+
+    &.black {
+        color: color(black) !important;
+    }
+
+    &.red {
+      color: red !important;
+    }
+
+    &.light {
+      font-weight: 200;
+    }
+
+    &.error {
+        color: #E93C3C !important;
+    }
+
+    &.bold {
+        font-weight: 600;
+    }
+
+    &.success {
+      color: #1AB759 !important;
+    }
+}

@@ -1,0 +1,44 @@
+/* ==========================================================================
+Styles for Card Stepper component
+========================================================================== */
+
+// import mixin and variables
+@import "../../../assets/styles/helper/function", "../../../assets/styles/helper/mixin",
+  "../../../assets/styles/project/init/variables";
+
+// Start styles Card Stepper component
+
+.o-card-stepper {
+  height: auto;
+  max-width: 712px;
+  background-color: color(white);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  @include shadow('on-white');
+  @include small {
+    min-height: 500px;
+  }
+  &__step-wrapper {
+      display: table;
+      position: relative;
+      padding: 41px 42px;
+      height: 104px;
+      width: 100%;
+      
+
+      @include small {
+        padding: 20px;
+        height: 64px;
+      }
+  }
+
+  &__content-wrapper {
+    position: relative;
+    // max-height: 600px;
+    padding: 40px;
+    border-top: 1px solid color(gray, 50);
+    @include small {
+      padding: 20px;
+    }
+  }
+}

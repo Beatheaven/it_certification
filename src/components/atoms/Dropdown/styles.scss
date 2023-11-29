@@ -1,0 +1,48 @@
+/* ==========================================================================
+Styles for Dropdown component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+'../../../assets/styles/helper/mixin',
+'../../../assets/styles/project/init/variables';
+
+// Start styles Dropdown component
+
+.o-dropdown {
+  background-color: color(white);
+  position: relative;
+  right: 1rem;
+  top: 100%;
+  bottom: 0;
+  box-shadow: 4px 8px 32px 0 rgba(32, 32, 35, 0.08);
+  border-radius: 8px;
+  width: 270px;
+  padding: 10px 0;
+  float: right;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: 87%;
+    width: 10px;
+    height: 10px;
+    border-top-left-radius: 5px;
+    background-color: white;
+    border: 1px solid #979797;
+    transform: rotate(45deg);
+    border-bottom: 0;
+    border-right: 0;
+    margin-left: -5px;
+    margin-top: -19px;
+  }
+  &-item {
+    padding: .5rem 1.5rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    &:hover {
+      background-color: #F1F3F5;
+    }
+  }
+}

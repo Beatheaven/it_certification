@@ -1,0 +1,52 @@
+/* ==========================================================================
+Styles for Body component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+'../../../assets/styles/helper/mixin',
+'../../../assets/styles/project/init/variables';
+
+// Start styles H4 component
+.o--text-body {
+  font-size: 16px;
+  line-height: 24px;
+  @include colors-all-font;
+
+  &.black {
+    color: color(black) !important;
+  }
+
+  &.red {
+    color: red !important;
+  }
+
+  &.red {
+    color: red !important;
+  }
+
+  &.white {
+    color: white !important;
+  }
+
+  &.light {
+    font-weight: 200;
+  }
+
+  &.error {
+    color: #e93c3c !important;
+  }
+
+  &.bold {
+    font-weight: 600;
+  }
+
+  &.success {
+    color: #1ab759 !important;
+  }
+
+  &.grey,
+  &.secondary {
+    color: #73808C;
+  }
+}

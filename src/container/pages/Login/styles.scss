@@ -1,0 +1,337 @@
+/* ==========================================================================
+Styles for NewLogin component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+'../../../assets/styles/helper/mixin',
+'../../../assets/styles/project/init/variables';
+
+//font rule
+.font{
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+// Start styles NewLogin component
+
+.o-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &__image-cover {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../../../assets/images/BG.jpg');
+    width: 100%;
+    height: 100vh;
+  }
+
+  &__image-wrapper {
+    flex: 1; // Gambar latar belakang di sebelah kanan
+    background-image: url(''); // Ganti dengan gambar latar belakang yang sesuai
+    background-size: cover;
+    background-position: center;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      float: right;
+
+      @include small {
+        margin-top: 74px;
+        height: 184px;
+
+        object-fit: contain;
+      }
+    }
+
+    &--d {
+      display: block;
+
+      @include small {
+        display: none;
+      }
+    }
+
+    &--m {
+      display: none;
+
+      @include small {
+        display: block;
+      }
+    }
+  }
+
+  .o-header {
+    .navigation-button {
+      .login-button {
+        .a-system-icon {
+          display: none;
+        }
+      }
+
+      .login-button,
+      .burger-button {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .o-footer {
+    >.container {
+      display: table;
+      padding: 0.8rem 0;
+    }
+
+    @include mq(896px) {
+      display: table-cell;
+      padding-left: 24px;
+    }
+  }
+
+  @include small {
+    border-bottom-right-radius: 140px;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    >.container,
+    .col-sm-6 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .login-header {
+    display: inline-block;
+    width: 100%;
+    height: 74px;
+  }
+
+  .login-title {
+    min-width: 340px; // Sesuaikan dengan lebar form login Anda
+    padding-right: 20px; // Ruang antara form login dan gambar latar belakang
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include small {
+      padding: 24px 36px;
+      width: 85%;
+    }
+
+    .mobile-only {
+      display: none;
+
+      @include small {
+        display: block;
+      }
+    }
+
+    .a-text-conversational-single-liner {
+      margin-bottom: 0.8rem;
+    }
+
+    .a-h4 {
+      margin-bottom: 0;
+    }
+  }
+
+  .container {
+    .row {
+      .col-sm-6 {
+        @include mq(1000px) {
+          max-height: 100%;
+        }
+      }
+    }
+  }
+
+  .title-content {
+    font-size: 16px;
+    line-height: 24px;
+    color: color(white);
+    padding: 8px 0px;
+  }
+
+  .a-button {
+    margin: .5rem 0;
+    min-width: 340px;
+
+    @include small {
+      min-width: 100%;
+    }
+  }
+
+  .o-input {
+    margin-bottom: 8px;
+
+    input {
+      width: 340px;
+    }
+
+    &.small {
+      input {
+        width: 248px;
+      }
+    }
+
+    @include small {
+      margin-top: 16px;
+      margin-bottom: 0px;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  .link-section-down {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 536px;
+
+    @include small {
+      max-width: 100%;
+      display: table;
+    }
+
+    .a-links {
+      padding-top: 48px;
+      white-space: nowrap;
+      padding-left: 8px;
+      vertical-align: bottom;
+
+      @include small {
+        padding-top: 4px;
+        padding-left: 0px;
+      }
+    }
+  }
+
+  .link-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 536px;
+
+    @include small {
+      max-width: 100%;
+    }
+
+    .a-links {
+      white-space: nowrap;
+      padding-left: 8px;
+      vertical-align: bottom;
+    }
+  }
+
+  .a-notif {
+    margin: 20px 0px;
+    width: 374px;
+
+    @include small {
+      width: 100%;
+    }
+  }
+
+  // ...
+
+  .card {
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+
+    &__badge {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+
+      @include small {
+        display: none;
+      }
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      img {
+        max-width: 100px; // Sesuaikan ukuran logo perusahaan
+        margin-right: 10px;
+      }
+    }
+
+    .card-body {
+      .form-group {
+        margin-bottom: 1px;
+
+        label {
+          display: block;
+          margin-bottom: 6px;
+          font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-size: 16px;
+
+          &:focus {
+            outline: none;
+            border-color: #007BFF;
+          }
+        }
+      }
+
+      .forgot-password-link {
+        display: block;
+        text-align: right;
+      }
+
+      .form-group:last-child {
+        margin-bottom: 0;
+      }
+
+      .btn-primary {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+
+  }
+
+  // ...
+
+}
+ .content-container{
+  width: 100%;
+ }

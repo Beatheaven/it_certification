@@ -1,0 +1,107 @@
+/* ==========================================================================
+Styles for Stepper Form component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Stepper Form component
+
+.o-stepper-form {
+  display: table-cell;
+  vertical-align: middle;
+  &__step-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    border-radius: 50%;
+
+    height: 24px;
+    width: 24px;
+    background-color: #dadada;
+    .value {
+      text-align: center;
+      // padding: 4px 2px;
+      font-size: 16px;
+      color: color(gray, 100);
+
+      i {
+        font-size: 16px;
+        font-weight: 700;
+        color: color(white);
+      }
+    }
+
+    &.is-active {
+      animation: activeText 1.5s ease;
+      background-color: #ffbc1f;
+
+      .value {
+        color: color(black);
+      }
+    }
+    &.is-done {
+      background-color: #528de0;
+    }
+
+    @include small {
+    }
+  }
+
+  &__text-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 24px;
+    font-size: 16px;
+    padding-top: 1px;
+    padding-left: 10px;
+
+    &.is-active {
+      animation: activeText 1.5s ease;
+      font-weight: 700;
+    }
+
+    @include small {
+      display: none;
+      &.is-active {
+        display: table-cell;
+      }
+      padding-left: 10px;
+      padding-right: 0px;
+    }
+  }
+  &.line-tab {
+    // vertical-align: middle;
+    position: relative;
+    padding: 0px 0px 0px 24px;
+    width: 40px;
+    hr {
+      width: 40px;
+      background-color: color(black);
+      height: 1px;
+      border-width: 0;
+    }
+    @include small {
+      width: 24px;
+      padding: 0px 0px 0px 8px;
+
+      hr {
+        width: 24px;
+      }
+    }
+  }
+}
+
+@include keyframes(activeText) {
+  0% {
+    opacity: 0.3;
+    scale: 2.8;
+  }
+
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}

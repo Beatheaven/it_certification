@@ -1,0 +1,112 @@
+/* ==========================================================================
+Styles for Card Dashboard component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Card Dashboard component
+
+.o-card-dashboard {
+  position: relative;
+  height: 192px;
+  width: 100%;
+  background-color: color(white);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  @include shadow('on-white');
+  @include medium {
+    height: 280px !important;
+  }
+
+  @include mq(500px) {
+    height: 326px !important  ;
+  }
+
+  &__image-wrapper {
+    width: 252px;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    @include medium {
+      position: relative;
+      height: 80px;
+    }
+    img {
+      border-bottom-left-radius: 8px;
+      border-top-left-radius: 8px;
+      width: 252px;
+      height: 100%;
+      object-fit: cover;
+
+      @include medium {
+        height: 80px;
+      }
+    }
+    &--d {
+      display: block;
+
+      @include medium {
+        display: none;
+      }
+    }
+
+    &--m {
+      display: none;
+
+      @include medium {
+        display: block;
+      }
+    }
+  }
+  &__wrapper {
+    height: 192px;
+    padding-left: 20%;
+    display: table;
+
+    @include medium {
+      padding-left: 0;
+      padding-right: 24px;
+      padding-top: 24px;
+    }
+  }
+
+  &__text-wrapper {
+    width: 70%;
+    padding-left: 32px;
+    display: table-cell;
+    vertical-align: middle;
+    h4 {
+      padding-bottom: 8px;
+    }
+    @include medium {
+      width: 100%;
+      padding-left: 20px !important;
+      display: block;
+    }
+
+    @include mq(1300px - 1) {
+      padding-left: 100px;
+    }
+  }
+
+  &__button-wrapper {
+    .a-button {
+      right: 40px;
+      top: 40%;
+      position: absolute;
+      min-width: 100px;
+
+      @include medium {
+        right: 0;
+        margin-top: 16px;
+        margin-left: 24px;
+        position: relative;
+        display: block;
+      }
+    }
+  }
+}

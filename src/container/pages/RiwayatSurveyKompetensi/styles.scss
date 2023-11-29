@@ -1,0 +1,58 @@
+/* ==========================================================================
+Styles for Riwayat Survey
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Riwayat Survey
+
+.o-riwayat-survey {
+  min-height: 100vh;
+  width: 100%;
+  background-color: color(gray, 20);
+
+  .riwayat-survey-header {
+    width: 100%;
+    height: 74px;
+  }
+
+  > .container {
+    position: relative;
+    padding-bottom: 58px;
+    margin-top: -62px;
+  }
+
+  .o-card-survey-onprogress {
+    margin-bottom: 22px;
+  }
+  .o-card-category-kompetensi {
+    position: relative;
+    left: 0;
+    margin-bottom: 22px;
+    @include small {
+      height: auto;
+    }
+  }
+  .o-card-simple-button {
+    margin-bottom: 22px;
+  }
+  .o-card-stepper {
+    position: relative;
+    margin-top: 220px;
+    margin-bottom: 48px;
+    left: 0;
+
+    @include small {
+      height: auto;
+    }
+  }
+  .o-card-survey-history {
+    .a-h2 {
+      margin-top: 80px;
+      margin-bottom: 40px;
+    }
+  }
+}

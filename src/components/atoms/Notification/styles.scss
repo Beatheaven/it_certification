@@ -1,0 +1,55 @@
+/* ==========================================================================
+Styles for Notification component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Notification component
+
+.a-notif {
+  display: none;
+  height: 56px;
+  min-width: 300px;
+  padding: 16px;
+  background-color: color(gray, 100);
+  border-radius: 4px;
+  &.success {
+    animation: fadeIn 0.1s ease-out 1;
+    display: block;
+    background-color: color(system, successful);
+  }
+
+  &.error {
+    animation: fadeIn 1s ease-out 1;
+    display: block;
+    background-color: color(system, error);
+  }
+
+  &.none {
+    display: none;
+  }
+
+  @include small {
+    width: 100%;
+    height: 80px;
+  }
+}
+
+@include keyframes(fadeIn) {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.005);
+    -ms-transform: scale(1.005);
+    transform: scale(1.005);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}

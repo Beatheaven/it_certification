@@ -1,0 +1,148 @@
+.container {
+  background-color: #f4f4f4;
+
+  .content {
+    margin: 100px 30px;
+    padding: 30px;
+
+    .profile-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+
+      .profile-picture {
+        background-color: grey;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+      }
+
+      .profile-name {
+        font-size: 36px;
+        font-weight: 700;
+        margin: 0 10px;
+      }
+      .profile-role {
+        font-size: 36px;
+        font-weight: 700;
+        margin: 0 10px;
+      }
+    }
+
+    .class-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 20px 0px;
+
+      .class-box h1 {
+        font-size: 40px;
+        font-weight: 700;
+        margin: 10px 10px;
+      }
+
+      .class-item {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 30px;
+      }
+      @media (max-width: 1024px) {
+        .class-item {
+          grid-template-columns: repeat(2, 1fr);
+          grid-column-gap: 100px;
+        }
+      }
+      @media (max-width: 768px) {
+        .class-item {
+          grid-template-columns: repeat(2, 1fr);
+          grid-column-gap: 20px; /* Anda dapat menyesuaikan jarak sesuai kebutuhan */
+        }
+      }
+
+      .class-item Button {
+        width: 189px;
+        font-size: 24px;
+        height: 62px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        border-radius: 25px;
+        background-color: transparent;
+        color: #a51535;
+        border: 3px solid #9e9e9e;
+      }
+      .class-item Button.active {
+        background-color: #a51535;
+        color: #fff;
+        border: none;
+      }
+    }
+
+    .description-box {
+      display: grid;
+      grid-template-columns: 70% auto;
+      grid-column-gap: 20px;
+      height: 377px;
+    }
+    .grid-item1 {
+      border: 1px solid black;
+      font-size: 30px;
+      text-align: center;
+      background-color: #fff;
+
+      .desc-title {
+        font-size: 36px;
+        font-weight: 700;
+        text-align: start;
+        padding: 20px 0 0 70px;
+      }
+
+      .desc-list {
+        text-align: start;
+        padding: 35px 0 0 30px;
+        font-size: 24px;
+        font-weight: 400;
+      }
+
+      .desc-list ul {
+        list-style: none;
+      }
+    }
+
+    .grid-item2 {
+      display: block;
+      background-color: #fff;
+
+      .payment-desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .price {
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        margin-top: 15px;
+      }
+
+      .pay-btn {
+        background-color: #a51535;
+        color: #fff;
+        border-radius: 0;
+        font-size: 22px;
+        font-weight: 700;
+        height: 42px;
+        width: 210px;
+        padding: 4px 52px;
+        margin-top: 12px;
+        border: none;
+      }
+
+      .pay-guarantee {
+        padding-top: 12px;
+        font-size: 24px;
+        font-weight: 500;
+      }
+    }
+  }
+}

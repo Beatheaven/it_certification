@@ -1,0 +1,118 @@
+/* ==========================================================================
+Styles for Card Profile component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Card Profile component
+
+.o-card-profile {
+  height: 144px;
+  max-width: 710px;
+  background-color: color(white);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  // animation: animateTop .5s ease-in;
+  @include shadow('on-white');
+
+  &__profile-wrapper {
+    width: 570px;
+    padding: 40px 16px 40px 40px;
+    height: 141px;
+    display: table;
+
+    @include small {
+      width: 70%;
+      display: block;
+      padding: 20px;
+    }
+
+    .a-avatar {
+      display: block;
+      margin-top: 2px;
+      height: 64px;
+      width: 64px;
+      position: relative;
+
+      img {
+        width: 64px;
+        height: 64px;
+        object-fit: cover;
+      }
+      @include small {
+        display: none;
+      }
+    }
+    .title-profile-wrapper {
+      padding-left: 20px;
+      display: table-cell;
+      vertical-align: middle;
+      h4 {
+        margin: 4px 0 0 0;
+      }
+      &__subs {
+        display: table-row;
+        color: color(primary, 100);
+        @include small {
+          display: none;
+        }
+      }
+      @include small {
+        display: block;
+        padding-left: 0;
+      }
+    }
+    .a-button-wrapper {
+      padding-left: 40px;
+      display: table-cell;
+      vertical-align: middle;
+      .a-button {
+        min-width: 158px;
+      }
+      @include small {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        padding-left: 0;
+      }
+    }
+
+    &:after {
+      content: '';
+      margin-left: 12px;
+      position: absolute;
+      top: 0;
+      border-left: 1px solid #dadada;
+      height: 100%;
+      @include small {
+        margin-left: 0;
+        right: 120px;
+      }
+    }
+  }
+  .qr-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 144px;
+    height: 144px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@include keyframes(animateTop) {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}

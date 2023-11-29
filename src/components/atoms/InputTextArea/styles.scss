@@ -1,0 +1,106 @@
+/* ==========================================================================
+Styles for Input Text Area component
+========================================================================== */
+
+// import mixin and variables
+@import "../../../assets/styles/helper/function", "../../../assets/styles/helper/mixin",
+  "../../../assets/styles/project/init/variables";
+
+// Start styles Input Text Area component
+
+.o-input-text-area {
+    position: relative;
+
+    .title-wrapper {
+        display: flex;
+
+        .text-title {
+            margin-right: 10px;
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 8px;
+            color: color(white);
+        }
+        .icon-title {
+            cursor: pointer;
+            width: 16px;
+            height: 16px;
+            margin-top: -2px;
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+    
+    textarea {
+        border: solid 2px color(gray, 50);
+        position: relative;
+        width: auto;
+        height: 100px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #73808C;
+        border-radius: 4px;
+        text-indent: 10px;
+        &.small {
+            width: 248px !important;
+            @include small {
+                min-width: 100%;
+            }
+        }
+
+        &.half {
+            width: 50%!important;
+            @include small {
+                min-width: 100%;
+            }
+        }
+
+        &.default {
+            width: 344px !important;
+            @include small {
+                min-width: 100%;
+            }
+        }
+
+        &.extra-small {
+            width: 200px !important;
+            @include small {
+                min-width: 100%;
+            }
+        }
+        @include small {
+            min-width: 100%;
+        }
+        &.width-full {
+            width: 100% !important;
+        }
+    }
+
+    &.title-black {
+        .text-title {
+            color: color(black);
+        }
+    }
+
+    &.input-gray {
+        textarea {
+            color:#171A1C;
+            background-color: color(gray,20);
+        }
+    }
+
+    &.input-red {
+      input {
+          border: 2px solid red;
+          color:#171A1C;
+          background-color: color(gray,20);
+      }
+    }
+
+    .o--text-body {
+        margin-top: 4px;
+    }
+
+}

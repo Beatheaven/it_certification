@@ -1,0 +1,82 @@
+/* ==========================================================================
+Styles for Card Category Kompetensi component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Card Category Kompetensi component
+
+.o-card-umkm-summary {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  box-shadow: 4px 8px 32px 0 rgba(32, 32, 35, 0.08);
+  flex-direction: row;
+  flex-wrap: wrap;
+  @include shadow('on-white');
+
+  &__item {
+    position: relative;
+    padding: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+
+    @include small {
+      padding: 40px 20px;
+    }
+
+    &:first-child {
+      @include small {
+        padding: 40px 0;
+      }
+    }
+
+    .a-item-competency {
+      display: flex;
+      justify-content: space-between;
+      margin: 1rem 0;
+    }
+
+    &::after {
+      content: '';
+      margin-left: 12px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-left: 1px solid #dadada;
+      height: 100%;
+    }
+  }
+
+  .o-score-survey {
+    position: relative;
+    display: flex;
+    flex-flow: column-reverse;
+    align-items: center;
+    margin: 1.3rem 0;
+
+    .o-score-survey_score-wrapper {
+      margin: 1.5rem 0;
+    }
+    .a-h3 {
+      margin: auto;
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding: 40px;
+    border-top: 1px solid color(gray, 50);
+
+    @include small {
+      padding: 20px;
+    }
+  }
+}

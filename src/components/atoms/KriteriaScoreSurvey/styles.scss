@@ -1,0 +1,40 @@
+/* ==========================================================================
+Styles for Kriteria Score Survey component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Kriteria Score Survey component
+
+.o-kriteria-survey {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 10px;
+  &__numbering {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    background-color: #dadada;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+  }
+  &__text {
+    padding-left: 34px;
+  }
+  &__kriteria_score {
+    margin-left: auto;
+    .o--text-body {
+      width: 80px;
+      text-align: right;
+    }
+    @include small {
+      padding-right: 10px;
+    }
+  }
+}

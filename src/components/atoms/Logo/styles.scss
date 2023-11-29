@@ -1,0 +1,28 @@
+/* ==========================================================================
+Styles for Logo component
+========================================================================== */
+
+// import mixin and variables
+@import '../../../assets/styles/helper/function',
+  '../../../assets/styles/helper/mixin',
+  '../../../assets/styles/project/init/variables';
+
+// Start styles Logo component
+
+.a-logo {
+  display: inline-block;
+  &.it-certification {
+    width: 38.5rem;
+    height: 9.6rem;
+    background: url('../../../assets/images/logo/it-certification.svg') left top /
+      100% auto no-repeat;
+  }
+  &.gpn {
+    width: 7.3rem;
+    height: 4rem;
+  }
+  &.ojk {
+    width: 7.3rem;
+    height: 4rem;
+  }
+}
