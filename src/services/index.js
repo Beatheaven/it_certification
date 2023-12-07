@@ -23,14 +23,14 @@ axios.interceptors.request.use(
 axios.interceptors.response.use(
   (response) => {
     return response;
-  }
-  // (error) => {
-  //   if (error.response?.status === 401) {
-  //     if ('token' in localStorage) localStorage.removeItem('token');
-  //     window.location = '/login';
-  //   }
-  //   return Promise.reject(error);
-  // }
+  },
+   (error) => {
+     if (error.response?.status === 401) {
+       if ('token' in localStorage) localStorage.removeItem('token');
+       window.location = '/login';
+     }
+     return Promise.reject(error);
+   }
 );
 
 export const handleNetworkError = (error) => {
