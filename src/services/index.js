@@ -30,7 +30,7 @@ axios.interceptors.response.use(
        window.location = '/login';
      }
      return Promise.reject(error);
-   }
+  }
 );
 
 export const handleNetworkError = (error) => {
