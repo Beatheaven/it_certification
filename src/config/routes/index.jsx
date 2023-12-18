@@ -66,8 +66,8 @@ const UnauthorizedRoutes = [
   },
   {
     id: 3,
-    path: '/register-nasabah',
-    component: lazy(() => import('container/pages/RegisterNasabah')),
+    path: '/register',
+    component: lazy(() => import('container/pages/Register')),
     exact: true
   },
   {
